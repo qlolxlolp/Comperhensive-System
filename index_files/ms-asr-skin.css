@@ -1,0 +1,3231 @@
+@charset "UTF-8";
+/**
+ * Created  by MORTEZA SADEGHI on 1/22/2015.
+ * Modified by MORTEZA SADEGHI on 2/13/2017.
+ 
+ */
+/* ADFFaces Skin File (Don't Remove) */
+@namespace af "http://xmlns.oracle.com/adf/faces/rich";
+@namespace dvt "http://xmlns.oracle.com/dss/adf/faces";
+/* import files */
+/* colors */
+/* colors by ...  */
+/* default */
+/* ex. panelbox title, tab title */
+/* ex. inputText label, inputDate label, soc label */
+/* @label-color : #???; */
+/* ex. inputText content, inputDate content, soc content */
+/* input-border-color */
+/* ex. panelbox title, tab title */
+/* ex. table body, tab body */
+/* ex. panel group layout bordeer, panelBox bordeer */
+/* functions */
+/*------------------------------------------------------------------------------
+cartable-wrapper
+کدهایی که در قسمت کارتابل(iFrame) اجرا میشوند
+----------------------------------------------------------------------------- */
+/*--------------------------------------------------------------------------- */
+/*--------------------------------------------------------------------------- */
+/* --------- DANGER Selectors! and SEARCH to in file '.AF' ------------------ */
+/*--------------------------------------------------------------------------- */
+/*--------------------------------------------------------------------------- */
+/*********************************   SOLUTION   ********************************
+      in All Applications:
+      ADD to 'WEB.XML' in code:
+
+  <context-param>
+    <description>m.sadeghi added</description>
+    <param-name>org.apache.myfaces.trinidad.DISABLE_CONTENT_COMPRESSION</param-name>
+    <param-value>true</param-value>
+  </context-param>
+
+*/
+.AFPanelFormLayoutContentCell {
+  padding-right: 3px !important;
+  vertical-align: middle;
+}
+.AFRequiredIconStyle {
+  color: red;
+  font-size: 14px;
+  line-height: 1;
+}
+td.AFContentCell {
+  text-align: left;
+  padding: 0;
+  vertical-align: middle;
+}
+td.AFContentCell > textarea {
+  text-align: left;
+}
+.AFPopupMenuContent {
+  font: normal 14px 'iran-sans', sans-serif;
+}
+/*--------------------------------------------------------------------------- */
+/*---------------------------- FADAK TOOLBAR CSS ---------------------------- */
+/*--------------------------------------------------------------------------- */
+.fadak-message {
+  display: block;
+  padding: 0 10px;
+  height: 45px;
+}
+.fadak-message.et1 {
+  background-color: #F45B5B;
+}
+.fadak-message.et2 {
+  background-color: #0AA699;
+}
+.fadak-message.et3 {
+  background-color: #FFDF00;
+}
+.fadak-message span.label {
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 3;
+}
+.fadak-message span.label.light {
+  color: #eeeeee;
+}
+.fadak-message span.label.dark {
+  color: #444444;
+}
+.cartable-wrapper .message-bar .fadak-message {
+  position: fixed;
+  z-index: 9999;
+}
+/*--------------------------------------------------------------------------- */
+/*----------------------------- HELP GUIDE CSS ------------------------------ */
+/*--------------------------------------------------------------------------- */
+.cartable-wrapper #asrPageGuideWrapper #asrPageGuideToggles {
+  left: 3px !important;
+}
+.cartable-wrapper #asrPageGuideWrapper #asrPageGuideToggles .asrpageguide_toggle {
+  height: auto;
+  border: none;
+  background: transparent;
+  padding: 0px;
+  color: rgba(255, 144, 0, 0.86);
+}
+.cartable-wrapper #asrPageGuideWrapper #asrPageGuideToggles .asrpageguide_toggle:hover {
+  color: rgba(220, 124, 0, 0.86);
+}
+.cartable-wrapper #asrPageGuideWrapper #asrPageGuideToggles .asrpageguide_toggle.asrPageGuideToggleActive {
+  color: #ff6c00;
+}
+/*----------------------------------------------------------- local functions */
+.label-property {
+  font: bold 14px 'iran-sans', sans-serif;
+  line-height: 1;
+}
+.content-property {
+  font: normal 14px 'iran-sans', sans-serif;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+.content-focus-property {
+  -webkit-box-shadow: 0px 0px 3px 0px #1d91e4;
+  -moz-box-shadow: 0px 0px 3px 0px #1d91e4;
+  box-shadow: 0px 0px 3px 0px #1d91e4;
+  border: 1px solid #1D91E4 !important;
+  outline: none;
+}
+/*---------------------------------------------------------------------- body */
+af|document {
+  color: #325773;
+  background: #4c7899;
+  font: normal 14px 'yekan', 'Helvetica';
+  line-height: 1.5;
+  direction: rtl;
+}
+af|document a {
+  text-decoration: none;
+}
+.root {
+  min-height: inherit !important;
+  max-height: inherit !important;
+}
+.root > div {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+.root .body {
+  top: 0;
+  left: 0;
+  position: absolute;
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+/*------------------------------------------------------------- splash-screen */
+af|document::splash-screen-icon {
+  content: url("../images/splash-logo.gif");
+}
+/*----------------------------------------------------------- statusIndicator */
+af|statusIndicator {
+  height: 30px;
+  width: 53px;
+}
+af|statusIndicator::connected-icon {
+  content: url("../images/logo.png");
+}
+af|statusIndicator::connecting-icon {
+  content: url("/images/logo-busy.gif");
+}
+af|statusIndicator::idle-icon {
+  content: url("../images/logo.png");
+}
+af|statusIndicator::reconnecting-icon {
+  content: url("../images/logo-disconnected.gif");
+}
+af|statusIndicator::processing-icon {
+  content: url("../images/logo-busy.gif");
+}
+af|statusIndicator::disconnected-icon {
+  content: url("../images/logo-disconnected.gif");
+}
+/*------------------------------------------------------ HIGHLIGHT components */
+af|inputText.highlight af|inputText::content {
+  background-color: #ffe89f !important;
+}
+af|inputText:disabled.highlight af|inputText::content {
+  background-color: #ded8c6 !important;
+}
+af|panelLabelAndMessage.highlight {
+  background-color: #ffe89f !important;
+}
+af|panelLabelAndMessage af|panelLabelAndMessage::content-cell > span.highlight {
+  background-color: #ffe89f !important;
+}
+af|inputDate.highlight af|inputDate::content {
+  background-color: #ffe89f !important;
+}
+af|inputDate:disabled.highlight af|inputDate::content {
+  background-color: #ded8c6 !important;
+}
+af|inputNumberSpinbox.highlight af|inputNumberSpinbox::content {
+  background-color: #ffe89f !important;
+}
+af|inputNumberSpinbox:disabled.highlight af|inputNumberSpinbox::content {
+  background-color: #ded8c6 !important;
+}
+af|selectOneChoice.highlight select.af_selectOneChoice_content,
+af|selectOneChoice.highlight span.af_selectOneChoice_content {
+  background-color: #ffe89f !important;
+}
+af|inputListOfValues.highlight .af_inputListOfValues_content {
+  background-color: #ffe89f !important;
+}
+table tr > td.highlight {
+  background-color: #ffe89f !important;
+}
+/*------------------------------------------------------ ERROR components */
+af|inputText.error af|inputText::content {
+  background-color: #f8a09f !important;
+}
+af|inputText:disabled.error af|inputText::content {
+  background-color: #fab8b7 !important;
+}
+af|panelLabelAndMessage af|panelLabelAndMessage::content-cell > span.error {
+  background-color: #f8a09f !important;
+}
+af|inputDate.error af|inputDate::content {
+  background-color: #f8a09f !important;
+}
+af|inputDate:disabled.error af|inputDate::content {
+  background-color: #fab8b7 !important;
+}
+af|inputNumberSpinbox.error af|inputNumberSpinbox::content {
+  background-color: #f8a09f !important;
+}
+af|inputNumberSpinbox:disabled.error af|inputNumberSpinbox::content {
+  background-color: #fab8b7 !important;
+}
+af|selectOneChoice.error select.af_selectOneChoice_content,
+af|selectOneChoice.error span.af_selectOneChoice_content {
+  background-color: #f8a09f !important;
+}
+af|inputListOfValues.error .af_inputListOfValues_content {
+  background-color: #f8a09f !important;
+}
+table tr > td.error {
+  background-color: #f8a09f !important;
+}
+
+/*------------------------------------------------------ Inp ERROR components */
+af|inputText.Inperror af|inputText::content {
+  background-color: #fddede !important;
+}
+af|inputText:disabled.Inperror af|inputText::content {
+  background-color: #fddede !important;
+}
+af|panelLabelAndMessage af|panelLabelAndMessage::content-cell > span.Inperror {
+  background-color: #fddede !important;
+}
+af|inputDate.Inperror af|inputDate::content {
+  background-color: #fddede !important;
+}
+af|inputDate:disabled.Inperror af|inputDate::content {
+  background-color: #fddede !important;
+}
+af|inputNumberSpinbox.Inperror af|inputNumberSpinbox::content {
+  background-color: #fddede !important;
+}
+af|inputNumberSpinbox:disabled.Inperror af|inputNumberSpinbox::content {
+  background-color: #fddede !important;
+}
+af|selectOneChoice.Inperror select.af_selectOneChoice_content,
+af|selectOneChoice.Inperror span.af_selectOneChoice_content {
+  background-color: #fddede !important;
+}
+af|inputListOfValues.Inperror .af_inputListOfValues_content {
+  background-color: #fddede !important;
+}
+table tr > td.Inperror {
+  background-color: #fddede !important;
+}
+
+
+/*----------- ltr class for panelLabelandmessage & table --- sample: 234234- */
+.ltr td.AFContentCell,
+td.ltr,
+span.ltr {
+  direction: ltr !important;
+}
+span.ltr {
+  display: inline-block;
+}
+/*-------------------------------------------------------- all camponent TEXT */
+af|inputText::label,
+af|inputDate::label,
+af|selectOneChoice::label,
+af|selectManyChoice::label,
+af|inputListOfValues::label,
+af|selectBooleanCheckbox::label,
+af|inputNumberSpinbox::label {
+  font: bold 14px 'iran-sans', sans-serif;
+  line-height: 1;
+  text-align: right;
+  vertical-align: middle;
+  white-space: normal;
+}
+af|inputText::content,
+af|inputDate::content,
+af|selectOneChoice::content,
+af|selectManyChoice::content,
+af|inputListOfValues::content,
+af|selectBooleanCheckbox::content,
+af|inputNumberSpinbox::content {
+  font: normal 14px 'iran-sans', sans-serif;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  vertical-align: middle;
+}
+af|inputText::content:focus,
+af|inputDate::content:focus,
+af|selectOneChoice::content:focus,
+af|selectManyChoice::content:focus,
+af|inputListOfValues::content:focus,
+af|selectBooleanCheckbox::content:focus,
+af|inputNumberSpinbox::content:focus {
+  -webkit-box-shadow: 0px 0px 3px 0px #1d91e4;
+  -moz-box-shadow: 0px 0px 3px 0px #1d91e4;
+  box-shadow: 0px 0px 3px 0px #1d91e4;
+  border: 1px solid #1D91E4 !important;
+  outline: none;
+}
+af|inputText,
+af|inputDate,
+af|inputListOfValues,
+af|selectOneChoice,
+af|selectManyChoice,
+af|panelLabelAndMessage,
+af|selectBooleanCheckbox,
+af|inputNumberSpinbox {
+  height: 30px;
+}
+af|inputText,
+af|inputText:disabled,
+af|inputDate,
+af|inputDate:disabled,
+af|inputListOfValues,
+af|inputListOfValues:disabled,
+af|inputNumberSpinbox,
+af|inputNumberSpinbox:disabled {
+  width: 100%;
+}
+af|inputText::content,
+af|inputText:disabled::content,
+af|inputDate::content,
+af|inputDate:disabled::content,
+af|inputListOfValues::content,
+af|inputListOfValues:disabled::content,
+af|inputNumberSpinbox::content,
+af|inputNumberSpinbox:disabled::content {
+  border: 1px solid #b4cddd;
+}
+af|panelLabelAndMessage,
+af|selectOneChoice,
+af|selectManyChoice {
+  width: 100%;
+}
+af|inputText:disabled af|inputText::content,
+af|inputDate:disabled af|inputDate::content,
+af|inputListOfValues:disabled af|inputListOfValues::content,
+af|selectOneChoice:disabled af|selectOneChoice::content,
+af|selectManyChoice:disabled af|selectManyChoice::content,
+af|inputNumberSpinbox:disabled af|inputNumberSpinbox::content {
+  color: #747677;
+  background-color: #ECF3FA;
+  -webkit-text-fill-color: #747677;
+}
+/*------------------------------------------------------- label & output-text */
+label {
+  font: bold 14px 'iran-sans', sans-serif;
+  line-height: 1;
+}
+span.label {
+  font: normal 14px 'iran-sans', sans-serif;
+}
+/*------------------------------------------------------ panelLabelAndMessage */
+af|panelLabelAndMessage::label {
+  font: bold 14px 'iran-sans', sans-serif;
+  line-height: 1;
+  text-align: right;
+}
+af|panelLabelAndMessage::content-cell {
+  font: normal 14px 'iran-sans', sans-serif;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+/*----------------------------------------------------------------- inputDate */
+af|inputDate,
+af|inputListOfValues {
+  position: relative;
+}
+af|inputDate::content,
+af|inputListOfValues::content {
+  width: 170px;
+}
+af|inputDate > .AFPanelFormLayoutContentCell,
+af|inputListOfValues > .AFPanelFormLayoutContentCell {
+  position: absolute;
+}
+af|column::column-filter-cell af|inputDate::content {
+  width: 100%;
+  position: relative;
+}
+af|inputDate::launch-icon-style {
+  position: absolute;
+  left: 4px;
+  top: 7px;
+  height: 16px;
+  font: normal normal normal 16px/1 FontAwesome;
+  padding: 0;
+  transition: all 0.2s linear 0ms;
+  -moz-transition: all 0.2s linear 0ms;
+  -webkit-transition: all 0.2s linear 0ms;
+  -o-transition: all 0.2s linear 0ms;
+  -ms-transition: all 0.2s linear 0ms;
+  text-decoration: none;
+}
+af|inputDate::launch-icon-style::before {
+  content: "\f073";
+}
+af|inputDate::launch-icon-style,
+af|inputDate::launch-icon-style:active,
+af|inputDate::launch-icon-style:disabled:active,
+af|inputDate::launch-icon-style:hover,
+af|inputDate::launch-icon-style:disabled:hover,
+af|inputDate::launch-icon-style:active:hover {
+  background-image: none !important;
+  text-decoration: none;
+}
+/*------------------------------------------- inputNumberSpinbox & chooseDate */
+af|inputNumberSpinbox .AFContentCell > table td:nth-child(2),
+af|query::criterion af|inputNumberSpinbox > table > tbody > tr > td:nth-child(2),
+af|chooseDate::spinbox > table td:nth-child(2) {
+  display: inline-block;
+  width: 0;
+  height: 0;
+}
+af|chooseDate::increment-cell,
+af|chooseDate::decrement-cell,
+af|inputNumberSpinbox::increment-cell,
+af|inputNumberSpinbox::decrement-cell {
+  position: relative;
+  left: 17px;
+  background-color: transparent;
+}
+af|inputNumberSpinbox::increment-cell,
+af|chooseDate::increment-cell {
+  top: -1px;
+  z-index: 10;
+}
+af|inputNumberSpinbox::decrement-cell,
+af|chooseDate::decrement-cell {
+  top: 1px;
+  z-index: 5;
+}
+af|inputNumberSpinbox::incrementor-icon-style,
+af|inputNumberSpinbox::decrementor-icon-style,
+af|chooseDate::spinbox-incrementor-icon-style,
+af|chooseDate::spinbox-decrementor-icon-style {
+  background-image: none !important;
+  font: normal normal normal 18px/1 FontAwesome;
+  transition: all 0.2s linear 0ms;
+  -moz-transition: all 0.2s linear 0ms;
+  -webkit-transition: all 0.2s linear 0ms;
+  -o-transition: all 0.2s linear 0ms;
+  -ms-transition: all 0.2s linear 0ms;
+  cursor: pointer;
+}
+af|inputNumberSpinbox::incrementor-icon-style,
+af|inputNumberSpinbox::decrementor-icon-style,
+af|chooseDate::spinbox-incrementor-icon-style,
+af|chooseDate::spinbox-decrementor-icon-style,
+af|inputNumberSpinbox::incrementor-icon-style:active,
+af|inputNumberSpinbox::decrementor-icon-style:active,
+af|chooseDate::spinbox-incrementor-icon-style:active,
+af|chooseDate::spinbox-decrementor-icon-style:active,
+af|inputNumberSpinbox::incrementor-icon-style:disabled:active,
+af|inputNumberSpinbox::decrementor-icon-style:disabled:active,
+af|chooseDate::spinbox-incrementor-icon-style:disabled:active,
+af|chooseDate::spinbox-decrementor-icon-style:disabled:active,
+af|inputNumberSpinbox::incrementor-icon-style:hover,
+af|inputNumberSpinbox::decrementor-icon-style:hover,
+af|chooseDate::spinbox-incrementor-icon-style:hover,
+af|chooseDate::spinbox-decrementor-icon-style:hover,
+af|inputNumberSpinbox::incrementor-icon-style:disabled:hover,
+af|inputNumberSpinbox::decrementor-icon-style:disabled:hover,
+af|chooseDate::spinbox-incrementor-icon-style:disabled:hover,
+af|chooseDate::spinbox-decrementor-icon-style:disabled:hover,
+af|inputNumberSpinbox::incrementor-icon-style:active:hover,
+af|inputNumberSpinbox::decrementor-icon-style:active:hover,
+af|chooseDate::spinbox-incrementor-icon-style:active:hover,
+af|chooseDate::spinbox-decrementor-icon-style:active:hover,
+af|inputNumberSpinbox::incrementor-icon-style:focus,
+af|inputNumberSpinbox::decrementor-icon-style:focus,
+af|chooseDate::spinbox-incrementor-icon-style:focus,
+af|chooseDate::spinbox-decrementor-icon-style:focus {
+  text-decoration: none;
+}
+af|inputNumberSpinbox::incrementor-icon-style::before,
+af|chooseDate::spinbox-incrementor-icon-style::before {
+  content: "\f0d8";
+}
+af|inputNumberSpinbox::decrementor-icon-style::before,
+af|chooseDate::spinbox-decrementor-icon-style::before {
+  content: "\f0d7";
+}
+/*-------------------------------------------------------- inputNumberSpinbox */
+af|inputNumberSpinbox::content {
+  padding-left: 19px;
+  text-align: right;
+  width: 170px !important;
+}
+af|inputNumberSpinbox .AFContentCell > table {
+  width: 100%;
+}
+/*---------------------------------------------------------------- chooseDate */
+af|chooseDate {
+  border: none;
+}
+af|chooseDate::month-year-row {
+  padding: 0 0 8px 0;
+}
+af|chooseDate::choice-list-content {
+  font: normal 14px 'iran-sans', sans-serif;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  margin: 3px 0;
+  border: 1px solid #b4cddd;
+}
+af|chooseDate::spinbox-content {
+  font: normal 14px 'iran-sans', sans-serif;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  padding-right: 5px;
+  margin-right: 10px;
+  width: 60px !important;
+  border: 1px solid #b4cddd;
+}
+af|chooseDate::week-header-row {
+  background-color: #FAFDFF;
+  border: 1px solid #B4CDDD;
+  font-family: 'yekan', 'Helvetica';
+  font-size: 13px;
+  white-space: nowrap;
+}
+af|chooseDate::days-row {
+  font: normal 14px 'iran-sans', sans-serif;
+  height: 24px;
+}
+af|chooseDate::today {
+  border: 1px solid #5A83A1 !important;
+  padding-bottom: 1px !important;
+}
+af|chooseDate::today:Selected,
+af|chooseDate::regular-day:Selected {
+  background-color: #E0EBF4;
+  border: 1px solid #5A83A1;
+}
+af|chooseDate::increment-cell,
+af|chooseDate::decrement-cell {
+  position: relative;
+  left: 15px;
+}
+af|chooseDate::next-month-arrow {
+  left: 15px;
+}
+af|chooseDate::next-month-arrow::before {
+  content: "\f053";
+}
+af|chooseDate::prev-month-arrow {
+  right: 15px;
+}
+af|chooseDate::prev-month-arrow::before {
+  content: "\f054";
+}
+af|chooseDate::next-month-arrow,
+af|chooseDate::prev-month-arrow {
+  background-image: none;
+  position: absolute;
+  top: 10px;
+  font: normal normal normal 18px/1 FontAwesome;
+  transition: all 0.2s linear 0ms;
+  -moz-transition: all 0.2s linear 0ms;
+  -webkit-transition: all 0.2s linear 0ms;
+  -o-transition: all 0.2s linear 0ms;
+  -ms-transition: all 0.2s linear 0ms;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+}
+af|chooseDate::next-month-arrow,
+af|chooseDate::prev-month-arrow,
+af|chooseDate::next-month-arrow:active,
+af|chooseDate::prev-month-arrow:active,
+af|chooseDate::next-month-arrow:disabled:active,
+af|chooseDate::prev-month-arrow:disabled:active,
+af|chooseDate::next-month-arrow:hover,
+af|chooseDate::prev-month-arrow:hover,
+af|chooseDate::next-month-arrow:disabled:hover,
+af|chooseDate::prev-month-arrow:disabled:hover,
+af|chooseDate::next-month-arrow:active:hover,
+af|chooseDate::prev-month-arrow:active:hover,
+af|chooseDate::next-month-arrow:focus,
+af|chooseDate::prev-month-arrow:focus {
+  background-image: none !important;
+  text-decoration: none;
+}
+/*--------------------------------------------------------- inputListOfValues */
+af|inputListOfValues img {
+  display: none;
+}
+af|inputListOfValues::search-icon-style {
+  position: absolute;
+  left: 5px;
+  top: 6px;
+  height: 16px;
+  font: normal normal normal 16px/1 FontAwesome;
+  padding: 0;
+  transition: all 0.2s linear 0ms;
+  -moz-transition: all 0.2s linear 0ms;
+  -webkit-transition: all 0.2s linear 0ms;
+  -o-transition: all 0.2s linear 0ms;
+  -ms-transition: all 0.2s linear 0ms;
+  text-decoration: none;
+}
+af|inputListOfValues::search-icon-style::before {
+  content: "\f002";
+}
+af|inputListOfValues::search-icon-style,
+af|inputListOfValues::search-icon-style:active,
+af|inputListOfValues::search-icon-style:disabled:active,
+af|inputListOfValues::search-icon-style:hover,
+af|inputListOfValues::search-icon-style:disabled:hover,
+af|inputListOfValues::search-icon-style:active:hover,
+af|inputListOfValues::search-icon-style:focus {
+  background-image: none !important;
+  text-decoration: none;
+}
+/*----------------------------------------------------------- selectOneChoice */
+af|selectOneChoice::content {
+  border: 1px solid #b4cddd !important;
+  width: 170px;
+  display: inline-block;
+}
+af|selectOneChoice.lg af|selectOneChoice::label label,
+af|selectOneChoice.lg af|selectOneChoice::content {
+  font-size: 1.15em;
+}
+af|selectOneChoice:ReadOnly af|selectOneChoice::content {
+  border: none !important;
+}
+af|selectOneChoice:ReadOnly span.af_selectOneChoice_content {
+  display: inline;
+}
+af|selectOneChoice:disabled span.af_selectOneChoice_content {
+  border: none !important;
+}
+af|selectOneChoice:ReadOnly .AFPanelFormLayoutContentCell af|selectOneChoice::content {
+  width: auto;
+}
+af|column::column-filter-cell af|selectOneChoice::content {
+  width: 100%;
+}
+.bread-crumb af|selectOneChoice {
+  position: absolute;
+  display: inline-block;
+  top: 1px;
+  width: 250px;
+  height: auto;
+}
+.bread-crumb af|selectOneChoice::content {
+  color: #F1F7FC;
+  text-align: right;
+}
+.bread-crumb af|selectOneChoice::label {
+  padding-left: 0;
+}
+/*----------------------------------------------------------- selectManyChoice */
+af|selectManyChoice::content {
+  border: 1px solid #b4cddd !important;
+  width: 154px;
+  display: inline-block;
+}
+af|selectManyChoice.lg af|selectManyChoice::label label,
+af|selectManyChoice.lg af|selectManyChoice::content {
+  font-size: 1.15em;
+}
+af|selectManyChoice:ReadOnly af|selectManyChoice::content {
+  border: none !important;
+}
+af|selectManyChoice:ReadOnly span.af_selectManyChoice_content {
+  display: inline;
+}
+af|selectManyChoice:disabled span.af_selectManyChoice_content {
+  border: none !important;
+}
+af|selectManyChoice:ReadOnly .AFPanelFormLayoutContentCell af|selectManyChoice::content {
+  width: auto;
+}
+af|column::column-filter-cell af|selectManyChoice::content {
+  width: 100%;
+}
+.bread-crumb af|selectManyChoice {
+  position: absolute;
+  display: inline-block;
+  top: 1px;
+  width: 250px;
+  height: auto;
+}
+.bread-crumb af|selectManyChoice::content {
+  color: #F1F7FC;
+  text-align: right;
+}
+.bread-crumb af|selectManyChoice::label {
+  padding-left: 0;
+}
+/*------------------------------------------------------------ selectOneRadio */
+af|selectOneRadio::label {
+  color: #6b8699;
+}
+af|selectOneRadio::content-input {
+  top: -2px;
+  position: relative;
+}
+af|selectOneRadio::content {
+  text-align: right;
+}
+af|selectOneRadio::content > div {
+  margin-bottom: 8px;
+}
+af|selectOneRadio::item-text {
+  vertical-align: bottom;
+  padding-right: 1px;
+  color: #6b8699;
+}
+af|selectOneRadio.horizontal af|selectOneRadio::label {
+  padding-top: 3px;
+}
+af|selectOneRadio.horizontal af|selectOneRadio::content > div {
+  display: inline-block;
+  margin-left: 20px;
+  margin-bottom: 0px;
+}
+af|selectOneRadio.horizontal af|selectOneRadio::content > div:last-child {
+  margin-left: 0px;
+}
+af|selectOneRadio.report-type af|selectOneRadio::label {
+  padding-right: 15px;
+}
+af|selectOneRadio.report-type af|selectOneRadio::content > div {
+  margin-left: 5px;
+}
+/*----------------------------------------------------------- all text colors */
+af|commandLink.success,
+af|goLink.success,
+td.success,
+span.success,
+div.success,
+label.success,
+af|commandLink.success:visited,
+af|goLink.success:visited,
+td.success:visited,
+span.success:visited,
+div.success:visited,
+label.success:visited {
+  color: #0aa699 !important;
+}
+af|commandLink.success:hover:focus,
+af|goLink.success:hover:focus,
+td.success:hover:focus,
+span.success:hover:focus,
+div.success:hover:focus,
+label.success:hover:focus,
+af|commandLink.success:hover,
+af|goLink.success:hover,
+td.success:hover,
+span.success:hover,
+div.success:hover,
+label.success:hover,
+af|commandLink:HoverTarget.success,
+af|goLink:HoverTarget.success,
+td:HoverTarget.success,
+span:HoverTarget.success,
+div:HoverTarget.success,
+label:HoverTarget.success,
+af|commandLink.success:focus,
+af|goLink.success:focus,
+td.success:focus,
+span.success:focus,
+div.success:focus,
+label.success:focus,
+af|commandLink.success:active,
+af|goLink.success:active,
+td.success:active,
+span.success:active,
+div.success:active,
+label.success:active {
+  color: #0bb0a2 !important;
+}
+af|commandLink.success:disabled,
+af|goLink.success:disabled,
+td.success:disabled,
+span.success:disabled,
+div.success:disabled,
+label.success:disabled,
+af|commandLink:disabled.success:visited,
+af|goLink:disabled.success:visited,
+td:disabled.success:visited,
+span:disabled.success:visited,
+div:disabled.success:visited,
+label:disabled.success:visited,
+af|commandLink:disabled.success:hover,
+af|goLink:disabled.success:hover,
+td:disabled.success:hover,
+span:disabled.success:hover,
+div:disabled.success:hover,
+label:disabled.success:hover,
+af|commandLink:HoverTarget:disabled.success,
+af|goLink:HoverTarget:disabled.success,
+td:HoverTarget:disabled.success,
+span:HoverTarget:disabled.success,
+div:HoverTarget:disabled.success,
+label:HoverTarget:disabled.success,
+af|commandLink:disabled.success:active,
+af|goLink:disabled.success:active,
+td:disabled.success:active,
+span:disabled.success:active,
+div:disabled.success:active,
+label:disabled.success:active {
+  color: #0aa699 !important;
+}
+af|commandLink.primary,
+af|goLink.primary,
+td.primary,
+span.primary,
+div.primary,
+label.primary,
+af|commandLink.primary:visited,
+af|goLink.primary:visited,
+td.primary:visited,
+span.primary:visited,
+div.primary:visited,
+label.primary:visited {
+  color: #2991c7 !important;
+}
+af|commandLink.primary:hover:focus,
+af|goLink.primary:hover:focus,
+td.primary:hover:focus,
+span.primary:hover:focus,
+div.primary:hover:focus,
+label.primary:hover:focus,
+af|commandLink.primary:hover,
+af|goLink.primary:hover,
+td.primary:hover,
+span.primary:hover,
+div.primary:hover,
+label.primary:hover,
+af|commandLink:HoverTarget.primary,
+af|goLink:HoverTarget.primary,
+td:HoverTarget.primary,
+span:HoverTarget.primary,
+div:HoverTarget.primary,
+label:HoverTarget.primary,
+af|commandLink.primary:focus,
+af|goLink.primary:focus,
+td.primary:focus,
+span.primary:focus,
+div.primary:focus,
+label.primary:focus,
+af|commandLink.primary:active,
+af|goLink.primary:active,
+td.primary:active,
+span.primary:active,
+div.primary:active,
+label.primary:active {
+  color: #2b97cf !important;
+}
+af|commandLink.primary:disabled,
+af|goLink.primary:disabled,
+td.primary:disabled,
+span.primary:disabled,
+div.primary:disabled,
+label.primary:disabled,
+af|commandLink:disabled.primary:visited,
+af|goLink:disabled.primary:visited,
+td:disabled.primary:visited,
+span:disabled.primary:visited,
+div:disabled.primary:visited,
+label:disabled.primary:visited,
+af|commandLink:disabled.primary:hover,
+af|goLink:disabled.primary:hover,
+td:disabled.primary:hover,
+span:disabled.primary:hover,
+div:disabled.primary:hover,
+label:disabled.primary:hover,
+af|commandLink:HoverTarget:disabled.primary,
+af|goLink:HoverTarget:disabled.primary,
+td:HoverTarget:disabled.primary,
+span:HoverTarget:disabled.primary,
+div:HoverTarget:disabled.primary,
+label:HoverTarget:disabled.primary,
+af|commandLink:disabled.primary:active,
+af|goLink:disabled.primary:active,
+td:disabled.primary:active,
+span:disabled.primary:active,
+div:disabled.primary:active,
+label:disabled.primary:active {
+  color: #2991c7 !important;
+}
+af|commandLink.warning,
+af|goLink.warning,
+td.warning,
+span.warning,
+div.warning,
+label.warning,
+af|commandLink.warning:visited,
+af|goLink.warning:visited,
+td.warning:visited,
+span.warning:visited,
+div.warning:visited,
+label.warning:visited {
+  color: #fa9f3b !important;
+}
+af|commandLink.warning:hover:focus,
+af|goLink.warning:hover:focus,
+td.warning:hover:focus,
+span.warning:hover:focus,
+div.warning:hover:focus,
+label.warning:hover:focus,
+af|commandLink.warning:hover,
+af|goLink.warning:hover,
+td.warning:hover,
+span.warning:hover,
+div.warning:hover,
+label.warning:hover,
+af|commandLink:HoverTarget.warning,
+af|goLink:HoverTarget.warning,
+td:HoverTarget.warning,
+span:HoverTarget.warning,
+div:HoverTarget.warning,
+label:HoverTarget.warning,
+af|commandLink.warning:focus,
+af|goLink.warning:focus,
+td.warning:focus,
+span.warning:focus,
+div.warning:focus,
+label.warning:focus,
+af|commandLink.warning:active,
+af|goLink.warning:active,
+td.warning:active,
+span.warning:active,
+div.warning:active,
+label.warning:active {
+  color: #fba64a !important;
+}
+af|commandLink.warning:disabled,
+af|goLink.warning:disabled,
+td.warning:disabled,
+span.warning:disabled,
+div.warning:disabled,
+label.warning:disabled,
+af|commandLink:disabled.warning:visited,
+af|goLink:disabled.warning:visited,
+td:disabled.warning:visited,
+span:disabled.warning:visited,
+div:disabled.warning:visited,
+label:disabled.warning:visited,
+af|commandLink:disabled.warning:hover,
+af|goLink:disabled.warning:hover,
+td:disabled.warning:hover,
+span:disabled.warning:hover,
+div:disabled.warning:hover,
+label:disabled.warning:hover,
+af|commandLink:HoverTarget:disabled.warning,
+af|goLink:HoverTarget:disabled.warning,
+td:HoverTarget:disabled.warning,
+span:HoverTarget:disabled.warning,
+div:HoverTarget:disabled.warning,
+label:HoverTarget:disabled.warning,
+af|commandLink:disabled.warning:active,
+af|goLink:disabled.warning:active,
+td:disabled.warning:active,
+span:disabled.warning:active,
+div:disabled.warning:active,
+label:disabled.warning:active {
+  color: #fbb05e !important;
+}
+af|commandLink.danger,
+af|goLink.danger,
+td.danger,
+span.danger,
+div.danger,
+label.danger,
+af|commandLink.danger:visited,
+af|goLink.danger:visited,
+td.danger:visited,
+span.danger:visited,
+div.danger:visited,
+label.danger:visited {
+  color: #f35958 !important;
+}
+af|commandLink.danger:hover:focus,
+af|goLink.danger:hover:focus,
+td.danger:hover:focus,
+span.danger:hover:focus,
+div.danger:hover:focus,
+label.danger:hover:focus,
+af|commandLink.danger:hover,
+af|goLink.danger:hover,
+td.danger:hover,
+span.danger:hover,
+div.danger:hover,
+label.danger:hover,
+af|commandLink:HoverTarget.danger,
+af|goLink:HoverTarget.danger,
+td:HoverTarget.danger,
+span:HoverTarget.danger,
+div:HoverTarget.danger,
+label:HoverTarget.danger,
+af|commandLink.danger:focus,
+af|goLink.danger:focus,
+td.danger:focus,
+span.danger:focus,
+div.danger:focus,
+label.danger:focus,
+af|commandLink.danger:active,
+af|goLink.danger:active,
+td.danger:active,
+span.danger:active,
+div.danger:active,
+label.danger:active {
+  color: #f46262 !important;
+}
+af|commandLink.danger:disabled,
+af|goLink.danger:disabled,
+td.danger:disabled,
+span.danger:disabled,
+div.danger:disabled,
+label.danger:disabled,
+af|commandLink:disabled.danger:visited,
+af|goLink:disabled.danger:visited,
+td:disabled.danger:visited,
+span:disabled.danger:visited,
+div:disabled.danger:visited,
+label:disabled.danger:visited,
+af|commandLink:disabled.danger:hover,
+af|goLink:disabled.danger:hover,
+td:disabled.danger:hover,
+span:disabled.danger:hover,
+div:disabled.danger:hover,
+label:disabled.danger:hover,
+af|commandLink:HoverTarget:disabled.danger,
+af|goLink:HoverTarget:disabled.danger,
+td:HoverTarget:disabled.danger,
+span:HoverTarget:disabled.danger,
+div:HoverTarget:disabled.danger,
+label:HoverTarget:disabled.danger,
+af|commandLink:disabled.danger:active,
+af|goLink:disabled.danger:active,
+td:disabled.danger:active,
+span:disabled.danger:active,
+div:disabled.danger:active,
+label:disabled.danger:active {
+  color: #f35958 !important;
+}
+af|commandLink.return,
+af|goLink.return,
+td.return,
+span.return,
+div.return,
+label.return,
+af|commandLink.return:visited,
+af|goLink.return:visited,
+td.return:visited,
+span.return:visited,
+div.return:visited,
+label.return:visited {
+  color: #ffdc6c !important;
+}
+af|commandLink.return:hover:focus,
+af|goLink.return:hover:focus,
+td.return:hover:focus,
+span.return:hover:focus,
+div.return:hover:focus,
+label.return:hover:focus,
+af|commandLink.return:hover,
+af|goLink.return:hover,
+td.return:hover,
+span.return:hover,
+div.return:hover,
+label.return:hover,
+af|commandLink:HoverTarget.return,
+af|goLink:HoverTarget.return,
+td:HoverTarget.return,
+span:HoverTarget.return,
+div:HoverTarget.return,
+label:HoverTarget.return,
+af|commandLink.return:focus,
+af|goLink.return:focus,
+td.return:focus,
+span.return:focus,
+div.return:focus,
+label.return:focus,
+af|commandLink.return:active,
+af|goLink.return:active,
+td.return:active,
+span.return:active,
+div.return:active,
+label.return:active {
+  color: #ffde76 !important;
+}
+af|commandLink.return:disabled,
+af|goLink.return:disabled,
+td.return:disabled,
+span.return:disabled,
+div.return:disabled,
+label.return:disabled,
+af|commandLink:disabled.return:visited,
+af|goLink:disabled.return:visited,
+td:disabled.return:visited,
+span:disabled.return:visited,
+div:disabled.return:visited,
+label:disabled.return:visited,
+af|commandLink:disabled.return:hover,
+af|goLink:disabled.return:hover,
+td:disabled.return:hover,
+span:disabled.return:hover,
+div:disabled.return:hover,
+label:disabled.return:hover,
+af|commandLink:HoverTarget:disabled.return,
+af|goLink:HoverTarget:disabled.return,
+td:HoverTarget:disabled.return,
+span:HoverTarget:disabled.return,
+div:HoverTarget:disabled.return,
+label:HoverTarget:disabled.return,
+af|commandLink:disabled.return:active,
+af|goLink:disabled.return:active,
+td:disabled.return:active,
+span:disabled.return:active,
+div:disabled.return:active,
+label:disabled.return:active {
+  color: #ffdc6c !important;
+}
+af|commandLink.dark,
+af|goLink.dark,
+td.dark,
+span.dark,
+div.dark,
+label.dark,
+af|commandLink.dark:visited,
+af|goLink.dark:visited,
+td.dark:visited,
+span.dark:visited,
+div.dark:visited,
+label.dark:visited {
+  color: #444444 !important;
+}
+af|commandLink.dark:hover:focus,
+af|goLink.dark:hover:focus,
+td.dark:hover:focus,
+span.dark:hover:focus,
+div.dark:hover:focus,
+label.dark:hover:focus,
+af|commandLink.dark:hover,
+af|goLink.dark:hover,
+td.dark:hover,
+span.dark:hover,
+div.dark:hover,
+label.dark:hover,
+af|commandLink:HoverTarget.dark,
+af|goLink:HoverTarget.dark,
+td:HoverTarget.dark,
+span:HoverTarget.dark,
+div:HoverTarget.dark,
+label:HoverTarget.dark,
+af|commandLink.dark:focus,
+af|goLink.dark:focus,
+td.dark:focus,
+span.dark:focus,
+div.dark:focus,
+label.dark:focus,
+af|commandLink.dark:active,
+af|goLink.dark:active,
+td.dark:active,
+span.dark:active,
+div.dark:active,
+label.dark:active {
+  color: #585858 !important;
+}
+af|commandLink.dark:disabled,
+af|goLink.dark:disabled,
+td.dark:disabled,
+span.dark:disabled,
+div.dark:disabled,
+label.dark:disabled,
+af|commandLink:disabled.dark:visited,
+af|goLink:disabled.dark:visited,
+td:disabled.dark:visited,
+span:disabled.dark:visited,
+div:disabled.dark:visited,
+label:disabled.dark:visited,
+af|commandLink:disabled.dark:hover,
+af|goLink:disabled.dark:hover,
+td:disabled.dark:hover,
+span:disabled.dark:hover,
+div:disabled.dark:hover,
+label:disabled.dark:hover,
+af|commandLink:HoverTarget:disabled.dark,
+af|goLink:HoverTarget:disabled.dark,
+td:HoverTarget:disabled.dark,
+span:HoverTarget:disabled.dark,
+div:HoverTarget:disabled.dark,
+label:HoverTarget:disabled.dark,
+af|commandLink:disabled.dark:active,
+af|goLink:disabled.dark:active,
+td:disabled.dark:active,
+span:disabled.dark:active,
+div:disabled.dark:active,
+label:disabled.dark:active {
+  color: #444444 !important;
+}
+af|commandLink.light,
+af|goLink.light,
+td.light,
+span.light,
+div.light,
+label.light,
+af|commandLink.light:visited,
+af|goLink.light:visited,
+td.light:visited,
+span.light:visited,
+div.light:visited,
+label.light:visited {
+  color: #eeeeee !important;
+}
+af|commandLink.light:hover:focus,
+af|goLink.light:hover:focus,
+td.light:hover:focus,
+span.light:hover:focus,
+div.light:hover:focus,
+label.light:hover:focus,
+af|commandLink.light:hover,
+af|goLink.light:hover,
+td.light:hover,
+span.light:hover,
+div.light:hover,
+label.light:hover,
+af|commandLink:HoverTarget.light,
+af|goLink:HoverTarget.light,
+td:HoverTarget.light,
+span:HoverTarget.light,
+div:HoverTarget.light,
+label:HoverTarget.light,
+af|commandLink.light:focus,
+af|goLink.light:focus,
+td.light:focus,
+span.light:focus,
+div.light:focus,
+label.light:focus,
+af|commandLink.light:active,
+af|goLink.light:active,
+td.light:active,
+span.light:active,
+div.light:active,
+label.light:active {
+  color: #f3f3f3 !important;
+}
+af|commandLink.light:disabled,
+af|goLink.light:disabled,
+td.light:disabled,
+span.light:disabled,
+div.light:disabled,
+label.light:disabled,
+af|commandLink:disabled.light:visited,
+af|goLink:disabled.light:visited,
+td:disabled.light:visited,
+span:disabled.light:visited,
+div:disabled.light:visited,
+label:disabled.light:visited,
+af|commandLink:disabled.light:hover,
+af|goLink:disabled.light:hover,
+td:disabled.light:hover,
+span:disabled.light:hover,
+div:disabled.light:hover,
+label:disabled.light:hover,
+af|commandLink:HoverTarget:disabled.light,
+af|goLink:HoverTarget:disabled.light,
+td:HoverTarget:disabled.light,
+span:HoverTarget:disabled.light,
+div:HoverTarget:disabled.light,
+label:HoverTarget:disabled.light,
+af|commandLink:disabled.light:active,
+af|goLink:disabled.light:active,
+td:disabled.light:active,
+span:disabled.light:active,
+div:disabled.light:active,
+label:disabled.light:active {
+  color: #eeeeee !important;
+}
+/*--------------------------------------------------------------- commandLink */
+af|commandLink,
+af|goLink {
+  font: bold 14px 'iran-sans', sans-serif;
+  line-height: 1;
+  color: #4c7899;
+  transition: all 0.2s linear 0ms;
+  -moz-transition: all 0.2s linear 0ms;
+  -webkit-transition: all 0.2s linear 0ms;
+  -o-transition: all 0.2s linear 0ms;
+  -ms-transition: all 0.2s linear 0ms;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+  /* --------------------------- */
+}
+af|commandLink:HoverTarget,
+af|goLink:HoverTarget,
+af|commandLink:active,
+af|goLink:active,
+af|commandLink:focus,
+af|goLink:focus,
+af|commandLink:TextOnly:focus,
+af|goLink:TextOnly:focus,
+af|commandLink:hover,
+af|goLink:hover,
+af|commandLink:hover:focus:active,
+af|goLink:hover:focus:active,
+af|commandLink:HoverTarget:hover,
+af|goLink:HoverTarget:hover,
+af|commandLink:HoverTarget:hover,
+af|goLink:HoverTarget:hover {
+  color: #3b5d77;
+  text-decoration: underline;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.35);
+}
+af|commandLink:disabled,
+af|goLink:disabled,
+af|commandLink:TextOnly:disabled,
+af|goLink:TextOnly:disabled,
+af|commandLink:TextOnly:disabled:hover,
+af|goLink:TextOnly:disabled:hover,
+af|commandLink:disabled:hover,
+af|goLink:disabled:hover,
+af|commandLink:HoverTarget:disabled,
+af|goLink:HoverTarget:disabled,
+af|commandLink:disabled:focus,
+af|goLink:disabled:focus,
+af|commandLink:disabled:active,
+af|goLink:disabled:active {
+  cursor: default;
+  color: #4c7899;
+  text-decoration: none;
+  text-shadow: none;
+}
+af|commandLink:disabled,
+af|goLink:disabled {
+  zoom: 1;
+  opacity: 0.3;
+  -moz-opacity: 0.3;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=(0.3 * 100));
+  filter: alpha(opacity= 0.3 * 100);
+  text-shadow: none;
+}
+af|commandLink.lnk-report,
+af|goLink.lnk-report,
+af|commandLink.lnk-report:visited,
+af|goLink.lnk-report:visited {
+  color: #0aa699 !important;
+}
+af|commandLink.lnk-report:hover:focus,
+af|goLink.lnk-report:hover:focus,
+af|commandLink.lnk-report:hover,
+af|goLink.lnk-report:hover,
+af|commandLink:HoverTarget.lnk-report,
+af|goLink:HoverTarget.lnk-report,
+af|commandLink.lnk-report:focus,
+af|goLink.lnk-report:focus,
+af|commandLink.lnk-report:active,
+af|goLink.lnk-report:active {
+  color: #0bb0a2 !important;
+}
+af|commandLink.lnk-report:disabled,
+af|goLink.lnk-report:disabled,
+af|commandLink:disabled.lnk-report:visited,
+af|goLink:disabled.lnk-report:visited,
+af|commandLink:disabled.lnk-report:hover,
+af|goLink:disabled.lnk-report:hover,
+af|commandLink:HoverTarget:disabled.lnk-report,
+af|goLink:HoverTarget:disabled.lnk-report,
+af|commandLink:disabled.lnk-report:active,
+af|goLink:disabled.lnk-report:active {
+  color: #0aa699 !important;
+}
+af|commandLink.lnk-sm,
+af|goLink.lnk-sm {
+  padding: 5px 3px 3px;
+  font: bold 12px 'iran-sans', sans-serif !important;
+  line-height: 1 !important;
+}
+af|commandLink.lnk-lg,
+af|goLink.lnk-lg {
+  padding: 8px 10px;
+  font: bold 16px 'iran-sans', sans-serif !important;
+  line-height: 1 !important;
+}
+/*------------------------------------------------------ commandToolbarButton */
+af|commandToolbarButton {
+  font: bold 14px 'iran-sans', sans-serif;
+  transition: all 0.22s ease 0ms;
+  -moz-transition: all 0.22s ease 0ms;
+  -webkit-transition: all 0.22s ease 0ms;
+  -o-transition: all 0.22s ease 0ms;
+  -ms-transition: all 0.22s ease 0ms;
+}
+af|commandToolbarButton af|commandToolbarButton::link:hover {
+  cursor: pointer;
+}
+af|toolbar af|commandToolbarButton:Disabled af|commandToolbarButton::link:hover,
+af|toolbar af|commandToolbarButton:hover:Disabled af|commandToolbarButton::link:hover {
+  cursor: default;
+}
+af|toolbar af|commandToolbarButton:TextOnly {
+  background-color: #d8ebf5;
+  background-image: none;
+  border: 1px solid #9bcce5;
+  height: 23px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+af|toolbar af|commandToolbarButton:TextOnly af|commandToolbarButton::text {
+  line-height: 1.4;
+}
+af|toolbar af|commandToolbarButton:TextOnly:Disabled,
+af|toolbar af|commandToolbarButton:TextOnly:hover:Disabled,
+af|toolbar af|commandToolbarButton:TextOnly:active:Disabled,
+af|toolbar af|commandToolbarButton:TextOnly:hover:active:Disabled {
+  background-color: #eff2f3;
+  background-image: none;
+  box-shadow: none;
+  border: 1px solid #c2ced3;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+af|toolbar af|commandToolbarButton:TextOnly:hover {
+  background-image: none;
+  background-color: #e4f1f8;
+  border-color: #93c8e3;
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32), 0 1px 6px 0 rgba(0, 0, 0, 0.12);
+}
+af|toolbar af|commandToolbarButton:TextOnly:active,
+af|toolbar af|commandToolbarButton:TextOnly:hover:active {
+  background-image: none;
+  background-color: #e4f1f8;
+  border-color: #5eadd6;
+  box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.18), 0 3px 14px 0 rgba(0, 0, 0, 0.15);
+}
+/*------------------------------------------------------------- commandButton */
+af|commandButton,
+af|dialog::footer-button,
+af|query::button {
+  /* Default Button */
+  /* primary Button */
+  /* success Button */
+  /* info Button */
+  /* warning Button */
+  /* danger Button */
+  /* report Button */
+  /* return Button */
+  /* next Button */
+  /* --------------------------- */
+  /* size : sm, lg */
+  /* icon */
+  /* btn radius */
+}
+af|commandButton,
+af|dialog::footer-button,
+af|query::button,
+af|commandButton:TextOnly,
+af|dialog::footer-button:TextOnly,
+af|query::button:TextOnly {
+  padding: 7px 8px 5px;
+  background-image: none !important;
+  border: 1px solid transparent;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  font: bold 14px 'iran-sans', sans-serif;
+  line-height: 1 !important;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-font-smoothing: subpixel-antialiased;
+  color: #444444;
+  background-color: #d8ebf5;
+  border-color: #9bcce5;
+  transition: all 0.22s ease 0ms;
+  -moz-transition: all 0.22s ease 0ms;
+  -webkit-transition: all 0.22s ease 0ms;
+  -o-transition: all 0.22s ease 0ms;
+  -ms-transition: all 0.22s ease 0ms;
+}
+af|commandButton:HoverTarget,
+af|dialog::footer-button:HoverTarget,
+af|query::button:HoverTarget,
+af|commandButton:hover,
+af|dialog::footer-button:hover,
+af|query::button:hover,
+af|commandButton:HoverTarget:disabled,
+af|dialog::footer-button:HoverTarget:disabled,
+af|query::button:HoverTarget:disabled,
+af|commandButton:disabled:hover,
+af|dialog::footer-button:disabled:hover,
+af|query::button:disabled:hover {
+  font: bold 14px 'iran-sans', sans-serif !important;
+  line-height: 1 !important;
+}
+af|commandButton:HoverTarget,
+af|dialog::footer-button:HoverTarget,
+af|query::button:HoverTarget,
+af|commandButton:active,
+af|dialog::footer-button:active,
+af|query::button:active,
+af|commandButton:focus,
+af|dialog::footer-button:focus,
+af|query::button:focus,
+af|commandButton:TextOnly:focus,
+af|dialog::footer-button:TextOnly:focus,
+af|query::button:TextOnly:focus,
+af|commandButton:hover,
+af|dialog::footer-button:hover,
+af|query::button:hover,
+af|commandButton:hover:focus:active,
+af|dialog::footer-button:hover:focus:active,
+af|query::button:hover:focus:active,
+af|commandButton:HoverTarget:hover,
+af|dialog::footer-button:HoverTarget:hover,
+af|query::button:HoverTarget:hover,
+af|commandButton:HoverTarget:hover,
+af|dialog::footer-button:HoverTarget:hover,
+af|query::button:HoverTarget:hover {
+  color: #3f3f3f;
+  background-color: #e4f1f8;
+  border-color: #93c8e3;
+}
+af|commandButton:disabled,
+af|dialog::footer-button:disabled,
+af|query::button:disabled,
+af|commandButton:TextOnly:disabled,
+af|dialog::footer-button:TextOnly:disabled,
+af|query::button:TextOnly:disabled,
+af|commandButton:TextOnly:disabled:hover,
+af|dialog::footer-button:TextOnly:disabled:hover,
+af|query::button:TextOnly:disabled:hover,
+af|commandButton:disabled:hover,
+af|dialog::footer-button:disabled:hover,
+af|query::button:disabled:hover,
+af|commandButton:HoverTarget:disabled,
+af|dialog::footer-button:HoverTarget:disabled,
+af|query::button:HoverTarget:disabled,
+af|commandButton:disabled:focus,
+af|dialog::footer-button:disabled:focus,
+af|query::button:disabled:focus,
+af|commandButton:disabled:active,
+af|dialog::footer-button:disabled:active,
+af|query::button:disabled:active {
+  cursor: default;
+  color: #444444;
+  background-color: #d8ebf5;
+  border-color: #9bcce5;
+}
+af|commandButton:hover,
+af|dialog::footer-button:hover,
+af|query::button:hover {
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32), 0 1px 6px 0 rgba(0, 0, 0, 0.12);
+}
+af|commandButton:active,
+af|dialog::footer-button:active,
+af|query::button:active,
+af|commandButton:hover:active,
+af|dialog::footer-button:hover:active,
+af|query::button:hover:active {
+  box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.18), 0 3px 14px 0 rgba(0, 0, 0, 0.15);
+}
+af|commandButton:disabled,
+af|dialog::footer-button:disabled,
+af|query::button:disabled,
+af|commandButton:disabled:hover,
+af|dialog::footer-button:disabled:hover,
+af|query::button:disabled:hover {
+  zoom: 1;
+  opacity: 0.4;
+  -moz-opacity: 0.4;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=(0.4 * 100));
+  filter: alpha(opacity= 0.4 * 100);
+  opacity: 0.4 !important;
+  -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  -moz-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+}
+af|commandButton.btn-primary,
+af|dialog::footer-button.btn-primary,
+af|query::button.btn-primary {
+  color: #eeeeee;
+  background-color: #2991c7;
+  border-color: #2685b6;
+}
+af|commandButton.btn-primary:hover:focus,
+af|dialog::footer-button.btn-primary:hover:focus,
+af|query::button.btn-primary:hover:focus,
+af|commandButton.btn-primary:hover,
+af|dialog::footer-button.btn-primary:hover,
+af|query::button.btn-primary:hover,
+af|commandButton:HoverTarget.btn-primary,
+af|dialog::footer-button:HoverTarget.btn-primary,
+af|query::button:HoverTarget.btn-primary,
+af|commandButton.btn-primary:focus,
+af|dialog::footer-button.btn-primary:focus,
+af|query::button.btn-primary:focus,
+af|commandButton.btn-primary:active,
+af|dialog::footer-button.btn-primary:active,
+af|query::button.btn-primary:active {
+  color: #f3f3f3;
+  background-color: #2c9ad3;
+  border-color: #278bbf;
+}
+af|commandButton.btn-primary:disabled,
+af|dialog::footer-button.btn-primary:disabled,
+af|query::button.btn-primary:disabled,
+af|commandButton:disabled.btn-primary:hover,
+af|dialog::footer-button:disabled.btn-primary:hover,
+af|query::button:disabled.btn-primary:hover,
+af|commandButton:HoverTarget:disabled.btn-primary,
+af|dialog::footer-button:HoverTarget:disabled.btn-primary,
+af|query::button:HoverTarget:disabled.btn-primary,
+af|commandButton:disabled.btn-primary:active,
+af|dialog::footer-button:disabled.btn-primary:active,
+af|query::button:disabled.btn-primary:active {
+  color: #eeeeee;
+  background-color: #2991c7;
+  border-color: #2685b6;
+}
+af|commandButton.btn-success,
+af|dialog::footer-button.btn-success,
+af|query::button.btn-success {
+  color: #eeeeee;
+  background-color: #0aa699;
+  border-color: #099387;
+}
+af|commandButton.btn-success:hover:focus,
+af|dialog::footer-button.btn-success:hover:focus,
+af|query::button.btn-success:hover:focus,
+af|commandButton.btn-success:hover,
+af|dialog::footer-button.btn-success:hover,
+af|query::button.btn-success:hover,
+af|commandButton:HoverTarget.btn-success,
+af|dialog::footer-button:HoverTarget.btn-success,
+af|query::button:HoverTarget.btn-success,
+af|commandButton.btn-success:focus,
+af|dialog::footer-button.btn-success:focus,
+af|query::button.btn-success:focus,
+af|commandButton.btn-success:active,
+af|dialog::footer-button.btn-success:active,
+af|query::button.btn-success:active {
+  color: #f3f3f3;
+  background-color: #0bb9ab;
+  border-color: #099c90;
+}
+af|commandButton.btn-success:disabled,
+af|dialog::footer-button.btn-success:disabled,
+af|query::button.btn-success:disabled,
+af|commandButton:disabled.btn-success:hover,
+af|dialog::footer-button:disabled.btn-success:hover,
+af|query::button:disabled.btn-success:hover,
+af|commandButton:HoverTarget:disabled.btn-success,
+af|dialog::footer-button:HoverTarget:disabled.btn-success,
+af|query::button:HoverTarget:disabled.btn-success,
+af|commandButton:disabled.btn-success:active,
+af|dialog::footer-button:disabled.btn-success:active,
+af|query::button:disabled.btn-success:active {
+  color: #eeeeee;
+  background-color: #0aa699;
+  border-color: #099387;
+}
+af|commandButton.btn-info,
+af|dialog::footer-button.btn-info,
+af|query::button.btn-info {
+  color: #eeeeee;
+  background-color: #4c7899;
+  border-color: #456d8b;
+}
+af|commandButton.btn-info:hover:focus,
+af|dialog::footer-button.btn-info:hover:focus,
+af|query::button.btn-info:hover:focus,
+af|commandButton.btn-info:hover,
+af|dialog::footer-button.btn-info:hover,
+af|query::button.btn-info:hover,
+af|commandButton:HoverTarget.btn-info,
+af|dialog::footer-button:HoverTarget.btn-info,
+af|query::button:HoverTarget.btn-info,
+af|commandButton.btn-info:focus,
+af|dialog::footer-button.btn-info:focus,
+af|query::button.btn-info:focus,
+af|commandButton.btn-info:active,
+af|dialog::footer-button.btn-info:active,
+af|query::button.btn-info:active {
+  color: #f3f3f3;
+  background-color: #5383a7;
+  border-color: #497392;
+}
+af|commandButton.btn-info:disabled,
+af|dialog::footer-button.btn-info:disabled,
+af|query::button.btn-info:disabled,
+af|commandButton:disabled.btn-info:hover,
+af|dialog::footer-button:disabled.btn-info:hover,
+af|query::button:disabled.btn-info:hover,
+af|commandButton:HoverTarget:disabled.btn-info,
+af|dialog::footer-button:HoverTarget:disabled.btn-info,
+af|query::button:HoverTarget:disabled.btn-info,
+af|commandButton:disabled.btn-info:active,
+af|dialog::footer-button:disabled.btn-info:active,
+af|query::button:disabled.btn-info:active {
+  color: #eeeeee;
+  background-color: #4c7899;
+  border-color: #456d8b;
+}
+af|commandButton.btn-warning,
+af|dialog::footer-button.btn-warning,
+af|query::button.btn-warning {
+  color: #eeeeee;
+  background-color: #fbb05e;
+  border-color: #fba64a;
+}
+af|commandButton.btn-warning:hover:focus,
+af|dialog::footer-button.btn-warning:hover:focus,
+af|query::button.btn-warning:hover:focus,
+af|commandButton.btn-warning:hover,
+af|dialog::footer-button.btn-warning:hover,
+af|query::button.btn-warning:hover,
+af|commandButton:HoverTarget.btn-warning,
+af|dialog::footer-button:HoverTarget.btn-warning,
+af|query::button:HoverTarget.btn-warning,
+af|commandButton.btn-warning:focus,
+af|dialog::footer-button.btn-warning:focus,
+af|query::button.btn-warning:focus,
+af|commandButton.btn-warning:active,
+af|dialog::footer-button.btn-warning:active,
+af|query::button.btn-warning:active {
+  color: #f3f3f3;
+  background-color: #fbba72;
+  border-color: #fbab54;
+}
+af|commandButton.btn-warning:disabled,
+af|dialog::footer-button.btn-warning:disabled,
+af|query::button.btn-warning:disabled,
+af|commandButton:disabled.btn-warning:hover,
+af|dialog::footer-button:disabled.btn-warning:hover,
+af|query::button:disabled.btn-warning:hover,
+af|commandButton:HoverTarget:disabled.btn-warning,
+af|dialog::footer-button:HoverTarget:disabled.btn-warning,
+af|query::button:HoverTarget:disabled.btn-warning,
+af|commandButton:disabled.btn-warning:active,
+af|dialog::footer-button:disabled.btn-warning:active,
+af|query::button:disabled.btn-warning:active {
+  color: #eeeeee;
+  background-color: #fbb05e;
+  border-color: #fba64a;
+}
+af|commandButton.btn-danger,
+af|dialog::footer-button.btn-danger,
+af|query::button.btn-danger {
+  color: #eeeeee;
+  background-color: #f35958;
+  border-color: #f24645;
+}
+af|commandButton.btn-danger:hover:focus,
+af|dialog::footer-button.btn-danger:hover:focus,
+af|query::button.btn-danger:hover:focus,
+af|commandButton.btn-danger:hover,
+af|dialog::footer-button.btn-danger:hover,
+af|query::button.btn-danger:hover,
+af|commandButton:HoverTarget.btn-danger,
+af|dialog::footer-button:HoverTarget.btn-danger,
+af|query::button:HoverTarget.btn-danger,
+af|commandButton.btn-danger:focus,
+af|dialog::footer-button.btn-danger:focus,
+af|query::button.btn-danger:focus,
+af|commandButton.btn-danger:active,
+af|dialog::footer-button.btn-danger:active,
+af|query::button.btn-danger:active {
+  color: #f3f3f3;
+  background-color: #f46c6b;
+  border-color: #f2504e;
+}
+af|commandButton.btn-danger:disabled,
+af|dialog::footer-button.btn-danger:disabled,
+af|query::button.btn-danger:disabled,
+af|commandButton:disabled.btn-danger:hover,
+af|dialog::footer-button:disabled.btn-danger:hover,
+af|query::button:disabled.btn-danger:hover,
+af|commandButton:HoverTarget:disabled.btn-danger,
+af|dialog::footer-button:HoverTarget:disabled.btn-danger,
+af|query::button:HoverTarget:disabled.btn-danger,
+af|commandButton:disabled.btn-danger:active,
+af|dialog::footer-button:disabled.btn-danger:active,
+af|query::button:disabled.btn-danger:active {
+  color: #eeeeee;
+  background-color: #f35958;
+  border-color: #f24645;
+}
+af|commandButton.btn-report,
+af|dialog::footer-button.btn-report,
+af|query::button.btn-report {
+  color: #444444;
+  background-color: #dedafb;
+  border-color: #b5acf6;
+}
+af|commandButton.btn-report:hover:focus,
+af|dialog::footer-button.btn-report:hover:focus,
+af|query::button.btn-report:hover:focus,
+af|commandButton.btn-report:hover,
+af|dialog::footer-button.btn-report:hover,
+af|query::button.btn-report:hover,
+af|commandButton:HoverTarget.btn-report,
+af|dialog::footer-button:HoverTarget.btn-report,
+af|query::button:HoverTarget.btn-report,
+af|commandButton.btn-report:focus,
+af|dialog::footer-button.btn-report:focus,
+af|query::button.btn-report:focus,
+af|commandButton.btn-report:active,
+af|dialog::footer-button.btn-report:active,
+af|query::button.btn-report:active {
+  color: #494949;
+  background-color: #eeecfd;
+  border-color: #bdb5f7;
+}
+af|commandButton.btn-report:disabled,
+af|dialog::footer-button.btn-report:disabled,
+af|query::button.btn-report:disabled,
+af|commandButton:disabled.btn-report:hover,
+af|dialog::footer-button:disabled.btn-report:hover,
+af|query::button:disabled.btn-report:hover,
+af|commandButton:HoverTarget:disabled.btn-report,
+af|dialog::footer-button:HoverTarget:disabled.btn-report,
+af|query::button:HoverTarget:disabled.btn-report,
+af|commandButton:disabled.btn-report:active,
+af|dialog::footer-button:disabled.btn-report:active,
+af|query::button:disabled.btn-report:active {
+  color: #444444;
+  background-color: #dedafb;
+  border-color: #b5acf6;
+}
+af|commandButton.btn-return,
+af|dialog::footer-button.btn-return,
+af|query::button.btn-return {
+  color: #444444;
+  background-color: #ffdc6c;
+  border-color: #ecb300;
+}
+af|commandButton.btn-return:hover:focus,
+af|dialog::footer-button.btn-return:hover:focus,
+af|query::button.btn-return:hover:focus,
+af|commandButton.btn-return:hover,
+af|dialog::footer-button.btn-return:hover,
+af|query::button.btn-return:hover,
+af|commandButton:HoverTarget.btn-return,
+af|dialog::footer-button:HoverTarget.btn-return,
+af|query::button:HoverTarget.btn-return,
+af|commandButton.btn-return:focus,
+af|dialog::footer-button.btn-return:focus,
+af|query::button.btn-return:focus,
+af|commandButton.btn-return:active,
+af|dialog::footer-button.btn-return:active,
+af|query::button.btn-return:active {
+  color: #494949;
+  background-color: #ffe180;
+  border-color: #f6bb00;
+}
+af|commandButton.btn-return:disabled,
+af|dialog::footer-button.btn-return:disabled,
+af|query::button.btn-return:disabled,
+af|commandButton:disabled.btn-return:hover,
+af|dialog::footer-button:disabled.btn-return:hover,
+af|query::button:disabled.btn-return:hover,
+af|commandButton:HoverTarget:disabled.btn-return,
+af|dialog::footer-button:HoverTarget:disabled.btn-return,
+af|query::button:HoverTarget:disabled.btn-return,
+af|commandButton:disabled.btn-return:active,
+af|dialog::footer-button:disabled.btn-return:active,
+af|query::button:disabled.btn-return:active {
+  color: #444444;
+  background-color: #ffdc6c;
+  border-color: #ecb300;
+}
+af|commandButton.btn-next,
+af|dialog::footer-button.btn-next,
+af|query::button.btn-next {
+  color: #eeeeee;
+  background-color: #5d54ff;
+  border-color: #4a40ff;
+}
+af|commandButton.btn-next:hover:focus,
+af|dialog::footer-button.btn-next:hover:focus,
+af|query::button.btn-next:hover:focus,
+af|commandButton.btn-next:hover,
+af|dialog::footer-button.btn-next:hover,
+af|query::button.btn-next:hover,
+af|commandButton:HoverTarget.btn-next,
+af|dialog::footer-button:HoverTarget.btn-next,
+af|query::button:HoverTarget.btn-next,
+af|commandButton.btn-next:focus,
+af|dialog::footer-button.btn-next:focus,
+af|query::button.btn-next:focus,
+af|commandButton.btn-next:active,
+af|dialog::footer-button.btn-next:active,
+af|query::button.btn-next:active {
+  color: #f3f3f3;
+  background-color: #6b63ff;
+  border-color: #534aff;
+}
+af|commandButton.btn-next:disabled,
+af|dialog::footer-button.btn-next:disabled,
+af|query::button.btn-next:disabled,
+af|commandButton:disabled.btn-next:hover,
+af|dialog::footer-button:disabled.btn-next:hover,
+af|query::button:disabled.btn-next:hover,
+af|commandButton:HoverTarget:disabled.btn-next,
+af|dialog::footer-button:HoverTarget:disabled.btn-next,
+af|query::button:HoverTarget:disabled.btn-next,
+af|commandButton:disabled.btn-next:active,
+af|dialog::footer-button:disabled.btn-next:active,
+af|query::button:disabled.btn-next:active {
+  color: #eeeeee;
+  background-color: #5d54ff;
+  border-color: #4a40ff;
+}
+af|commandButton.btn-sm,
+af|dialog::footer-button.btn-sm,
+af|query::button.btn-sm {
+  padding: 5px 3px 3px;
+  font: bold 12px 'iran-sans', sans-serif !important;
+  line-height: 1 !important;
+}
+af|commandButton.btn-lg,
+af|dialog::footer-button.btn-lg,
+af|query::button.btn-lg {
+  padding: 8px 10px;
+  font: bold 16px 'iran-sans', sans-serif !important;
+  line-height: 1 !important;
+}
+af|commandButton:HoverTarget.btn-sm,
+af|dialog::footer-button:HoverTarget.btn-sm,
+af|query::button:HoverTarget.btn-sm,
+af|commandButton.btn-sm:hover,
+af|dialog::footer-button.btn-sm:hover,
+af|query::button.btn-sm:hover {
+  font: bold 12px 'iran-sans', sans-serif !important;
+  line-height: 1 !important;
+}
+af|commandButton:HoverTarget.btn-lg,
+af|dialog::footer-button:HoverTarget.btn-lg,
+af|query::button:HoverTarget.btn-lg,
+af|commandButton.btn-lg:hover,
+af|dialog::footer-button.btn-lg:hover,
+af|query::button.btn-lg:hover {
+  font: bold 16px 'iran-sans', sans-serif !important;
+  line-height: 1 !important;
+}
+af|commandButton:HoverTarget:disabled.btn-sm,
+af|dialog::footer-button:HoverTarget:disabled.btn-sm,
+af|query::button:HoverTarget:disabled.btn-sm,
+af|commandButton:disabled.btn-sm:hover,
+af|dialog::footer-button:disabled.btn-sm:hover,
+af|query::button:disabled.btn-sm:hover {
+  font: bold 12px 'iran-sans', sans-serif !important;
+  line-height: 1 !important;
+}
+af|commandButton:HoverTarget:disabled.btn-lg,
+af|dialog::footer-button:HoverTarget:disabled.btn-lg,
+af|query::button:HoverTarget:disabled.btn-lg,
+af|commandButton:disabled.btn-lg:hover,
+af|dialog::footer-button:disabled.btn-lg:hover,
+af|query::button:disabled.btn-lg:hover {
+  font: bold 16px 'iran-sans', sans-serif !important;
+  line-height: 1 !important;
+}
+af|commandButton > i.fa,
+af|dialog::footer-button > i.fa,
+af|query::button > i.fa {
+  font-size: 1.1em;
+  vertical-align: middle;
+}
+af|commandButton.btn-sm > i.fa,
+af|dialog::footer-button.btn-sm > i.fa,
+af|query::button.btn-sm > i.fa {
+  font-size: 1.1em;
+}
+af|commandButton.btn-lg > i.fa,
+af|dialog::footer-button.btn-lg > i.fa,
+af|query::button.btn-lg > i.fa {
+  font-size: 1.2em;
+}
+af|commandButton.btn-radius,
+af|dialog::footer-button.btn-radius,
+af|query::button.btn-radius {
+  border-radius: 8px !important;
+}
+/*---------------------------------------------------------- panelGroupLayout */
+af|panelGroupLayout {
+  /*search popup for request page*/
+}
+af|panelGroupLayout.row {
+  display: block;
+}
+af|panelGroupLayout.row.panel-form > span[class*='col-'],
+af|panelGroupLayout.column.panel-form > span[class*='col-'] {
+  padding: 0 14px;
+}
+af|panelGroupLayout.row.panel-form-1 > span[class*='col-'],
+af|panelGroupLayout.column.panel-form-1 > span[class*='col-'] {
+  padding: 1px 14px;
+}
+af|panelGroupLayout.row.panel-form-2 > span[class*='col-'],
+af|panelGroupLayout.column.panel-form-2 > span[class*='col-'] {
+  padding: 2px 14px;
+}
+af|panelGroupLayout.row.panel-form-3 > span[class*='col-'],
+af|panelGroupLayout.column.panel-form-3 > span[class*='col-'] {
+  padding: 3px 14px;
+}
+af|panelGroupLayout.row.panel-form-4 > span[class*='col-'],
+af|panelGroupLayout.column.panel-form-4 > span[class*='col-'] {
+  padding: 4px 14px;
+}
+af|panelGroupLayout.row.panel-form-5 > span[class*='col-'],
+af|panelGroupLayout.column.panel-form-5 > span[class*='col-'] {
+  padding: 5px 14px;
+}
+af|panelGroupLayout.row[class*='panel-form'],
+af|panelGroupLayout.column[class*='panel-form'] {
+  display: flex !important;
+  flex-wrap: wrap;
+  flex: 1 0 100px;
+  align-content: flex-start;
+}
+af|panelGroupLayout.row[class*='panel-form'] label,
+af|panelGroupLayout.column[class*='panel-form'] label,
+af|panelGroupLayout.row[class*='panel-form'] af|panelFormLayout label,
+af|panelGroupLayout.column[class*='panel-form'] af|panelFormLayout label {
+  background-color: rgba(15, 116, 202, 0.1);
+  border-radius: 2px;
+  padding: 0px 2px;
+}
+af|panelGroupLayout.row[class*='panel-form'] .read-only td.AFContentCell,
+af|panelGroupLayout.column[class*='panel-form'] .read-only td.AFContentCell {
+  text-align: right;
+}
+af|panelGroupLayout.row[class*='panel-form'] .read-only td.AFContentCell > textarea,
+af|panelGroupLayout.column[class*='panel-form'] .read-only td.AFContentCell > textarea {
+  text-align: right;
+}
+af|panelGroupLayout.row[class*='panel-form'] .read-only af|inputText,
+af|panelGroupLayout.column[class*='panel-form'] .read-only af|inputText,
+af|panelGroupLayout.row[class*='panel-form'] .read-only af|inputText:disabled,
+af|panelGroupLayout.column[class*='panel-form'] .read-only af|inputText:disabled,
+af|panelGroupLayout.row[class*='panel-form'] .read-only af|inputDate,
+af|panelGroupLayout.column[class*='panel-form'] .read-only af|inputDate,
+af|panelGroupLayout.row[class*='panel-form'] .read-only af|inputDate:disabled,
+af|panelGroupLayout.column[class*='panel-form'] .read-only af|inputDate:disabled,
+af|panelGroupLayout.row[class*='panel-form'] .read-only af|inputListOfValues,
+af|panelGroupLayout.column[class*='panel-form'] .read-only af|inputListOfValues,
+af|panelGroupLayout.row[class*='panel-form'] .read-only af|inputListOfValues:disabled,
+af|panelGroupLayout.column[class*='panel-form'] .read-only af|inputListOfValues:disabled,
+af|panelGroupLayout.row[class*='panel-form'] .read-only af|inputNumberSpinbox,
+af|panelGroupLayout.column[class*='panel-form'] .read-only af|inputNumberSpinbox,
+af|panelGroupLayout.row[class*='panel-form'] .read-only af|inputNumberSpinbox:disabled,
+af|panelGroupLayout.column[class*='panel-form'] .read-only af|inputNumberSpinbox:disabled,
+af|panelGroupLayout.row[class*='panel-form'] .read-only af|panelLabelAndMessage,
+af|panelGroupLayout.column[class*='panel-form'] .read-only af|panelLabelAndMessage,
+af|panelGroupLayout.row[class*='panel-form'] .read-only af|selectOneChoice,
+af|panelGroupLayout.column[class*='panel-form'] .read-only af|selectOneChoice,
+af|panelGroupLayout.row[class*='panel-form'] .read-only af|selectManyChoice,
+af|panelGroupLayout.column[class*='panel-form'] .read-only af|selectManyChoice {
+  width: auto;
+}
+af|panelGroupLayout.row[class*='panel-form'] {
+  flex-direction: row;
+}
+af|panelGroupLayout.row[class*='panel-form'] > span[class*='col-'] {
+  border-left: 2px solid #6A97B9;
+}
+af|panelGroupLayout.column[class*='panel-form'] {
+  flex-direction: column;
+}
+af|panelGroupLayout.column[class*='panel-form'] > span[class*='col-'] {
+  border-left: 2px solid #6A97B9;
+}
+af|panelGroupLayout.border {
+  border: 1px solid #d6dfe6;
+}
+af|panelGroupLayout.form {
+  border: 1px solid #b2cee7;
+  background-color: #ecf3f9;
+}
+af|panelGroupLayout.panel-collection-toolbar {
+  display: inline-block;
+  left: 0;
+  position: absolute;
+  z-index: 700;
+}
+af|panelGroupLayout.button-wrapper {
+  background-color: #FFF;
+  display: block;
+  position: relative;
+  top: -17px;
+  padding: 8px 12px 10px;
+  margin-bottom: -12px;
+}
+af|panelGroupLayout.button-wrapper-lifter {
+  display: inline-block;
+  position: relative;
+  top: -46px;
+  right: 12px;
+  margin-bottom: -12px;
+}
+af|panelGroupLayout.button-wrapper-footer {
+  width: 100%;
+  display: inline-block;
+  position: relative;
+  background: #FFF;
+  padding: 0 12px 12px 0;
+  top: -10px;
+  border-radius: 0px 0px 3px 3px;
+}
+af|panelGroupLayout.compare {
+  padding: 10px 14px 4px;
+}
+af|panelGroupLayout.compare > .wrapper {
+  padding: 0;
+  border-left: 1px solid #9cb9d4;
+}
+af|panelGroupLayout.compare > .wrapper:last-child {
+  border-left: none;
+}
+af|panelGroupLayout.compare > .wrapper > .field {
+  display: block;
+  border-bottom: 1px solid #9cb9d4;
+}
+af|panelGroupLayout.compare > .wrapper > .field:nth-child(odd) {
+  background-color: #e0ebf4;
+}
+af|panelGroupLayout.compare > .wrapper > .field.old {
+  background-color: #f1c574;
+}
+af|panelGroupLayout.compare > .wrapper > .field.new {
+  background-color: #94e294;
+}
+af|panelGroupLayout.region-code-name > tbody > tr > td:nth-child(1) {
+  width: 100%;
+}
+af|panelGroupLayout.region-code-name > tbody > tr > td:nth-last-child(1) {
+  position: absolute;
+  left: 50px;
+  top: 3px;
+}
+/*--------------------------------------------------------------- panelHeader */
+af|panelHeader::title-text0 {
+  font: 16px 'yekan', 'Helvetica';
+}
+/*---------------------------------------------------------- showDetailHeader */
+af|showDetailHeader::title-text1,
+af|showDetailHeader::title-text2 {
+  font: normal 14px 'yekan', 'Helvetica';
+}
+/*---------------------------------------------------------------- showDetail */
+af|showDetail::header-text {
+  font: normal 14px 'yekan', 'Helvetica';
+}
+/*----------------------------------------------------------- panelFormLayout */
+af|panelFormLayout::label-cell {
+  vertical-align: middle;
+  text-align: right;
+}
+af|panelFormLayout.border::column {
+  padding: 0 15px;
+}
+af|panelFormLayout.border::column tr {
+  border-bottom: 1px solid rgba(139, 200, 250, 0.1);
+}
+af|panelFormLayout.border::column tr:nth-child(even) {
+  background-color: rgba(172, 198, 219, 0.1);
+}
+af|panelFormLayout.border::column:first-child {
+  padding-right: 0;
+}
+af|panelFormLayout.border::column:last-child {
+  padding-left: 0;
+}
+/*------------------------------------------------------------------ panelBox */
+af|panelBox {
+  border: 1px solid #CCD9E2;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  -moz-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  /* Default */
+  /* primary */
+  /* success */
+  /* info */
+  /* warning */
+  /* danger */
+}
+af|panelBox::toolbar {
+  padding: 0 10px 0 12px;
+}
+af|panelBox::toolbar af|toolbar {
+  float: none;
+  display: inline-block;
+  vertical-align: middle;
+}
+af|panelBox::header-element {
+  font: normal 14px 'yekan', 'Helvetica';
+  color: #325773;
+  padding: 0 10px 0 0;
+  line-height: 1;
+}
+af|panelBox::footer-center {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+af|panelBox > af|panelBox::table {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  height: 34px;
+}
+af|panelBox::disclosure-icon-container {
+  padding: 0px 10px 0px 0px;
+}
+af|panelBox::disclosed-icon-style,
+af|panelBox::undisclosed-icon-style {
+  width: 100%;
+  background-image: none !important;
+  font: normal normal normal 19px/1 FontAwesome;
+  text-decoration: none;
+  transition: all 0.2s linear 0ms;
+  -moz-transition: all 0.2s linear 0ms;
+  -webkit-transition: all 0.2s linear 0ms;
+  -o-transition: all 0.2s linear 0ms;
+  -ms-transition: all 0.2s linear 0ms;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+af|panelBox::disclosed-icon-style:hover,
+af|panelBox::undisclosed-icon-style:hover,
+af|panelBox::disclosed-icon-style:focus,
+af|panelBox::undisclosed-icon-style:focus,
+af|panelBox::disclosed-icon-style:active,
+af|panelBox::undisclosed-icon-style:active,
+af|panelBox::disclosed-icon-style:hover:active,
+af|panelBox::undisclosed-icon-style:hover:active {
+  background-image: none !important;
+  text-decoration: none;
+  cursor: pointer;
+}
+af|panelBox::disclosed-icon-style::before {
+  content: "\f078";
+}
+af|panelBox::undisclosed-icon-style::before {
+  content: "\f053";
+}
+af|panelBox > af|panelBox::table:Core {
+  background-color: #d1e2f0;
+}
+af|panelBox > af|panelBox::center:Core,
+af|panelBox > af|panelBox::footer-center:Core,
+af|panelBox > af|panelBox::center > af|panelBox::content:Core {
+  background-color: #ecf3f9;
+}
+af|panelBox.primary > af|panelBox::table {
+  background-color: #92d6f9;
+}
+af|panelBox.primary > af|panelBox::center,
+af|panelBox.primary > af|panelBox::footer-center,
+af|panelBox.primary > af|panelBox::center > af|panelBox::content {
+  background-color: #e4f2f9;
+}
+af|panelBox.success > af|panelBox::table {
+  background-color: #dff0d8;
+}
+af|panelBox.success > af|panelBox::center,
+af|panelBox.success > af|panelBox::footer-center,
+af|panelBox.success > af|panelBox::center > af|panelBox::content {
+  background-color: #f0f7ed;
+}
+af|panelBox.info > af|panelBox::table {
+  background-color: #d9edf7;
+}
+af|panelBox.info > af|panelBox::center,
+af|panelBox.info > af|panelBox::footer-center,
+af|panelBox.info > af|panelBox::center > af|panelBox::content {
+  background-color: #eff7fb;
+}
+af|panelBox.warning > af|panelBox::table {
+  background-color: #fbe7d1;
+}
+af|panelBox.warning > af|panelBox::center,
+af|panelBox.warning > af|panelBox::footer-center,
+af|panelBox.warning > af|panelBox::center > af|panelBox::content {
+  background-color: #f7f4f1;
+}
+af|panelBox.danger > af|panelBox::table {
+  background-color: #fddfde;
+}
+af|panelBox.danger > af|panelBox::center,
+af|panelBox.danger > af|panelBox::footer-center,
+af|panelBox.danger > af|panelBox::center > af|panelBox::content {
+  background-color: #fddddd;
+}
+af|panelBox.starter {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15), 0 -1px 6px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15), 0 -1px 6px rgba(0, 0, 0, 0.15);
+}
+af|panelBox.starter::header-element {
+  font-size: 17px;
+}
+af|panelBox.starter > af|panelBox::center {
+  padding: 0 9px 2px;
+}
+af|panelBox.starter > af|panelBox::table {
+  height: 45px;
+  background-color: #E0EBF4;
+}
+af|panelBox.starter > af|panelBox::center,
+af|panelBox.starter > af|panelBox::footer-center,
+af|panelBox.starter > af|panelBox::center > af|panelBox::content {
+  background-color: #fff;
+}
+af|panelBox.starter::table > tbody {
+  border-bottom: 1px solid #BCC7D2;
+}
+af|panelBox.starter.fixed > af|panelBox::table {
+  position: fixed;
+  top: 46px;
+  right: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  width: 100%;
+  height: 40px;
+  z-index: 1000;
+  -webkit-box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.25);
+}
+af|panelBox.starter.fixed > af|panelBox::center {
+  padding-top: 40px;
+}
+af|panelBox.detail > af|panelBox::table,
+af|panelBox.no-title > af|panelBox::table {
+  display: none !important;
+}
+af|panelBox.starter.detail {
+  position: relative;
+  top: -15px;
+  box-shadow: none;
+  border-top: none;
+  margin-bottom: -15px;
+}
+af|panelBox.form {
+  background-color: #ecf3f9;
+  border: 1px solid #b2cee7;
+  box-shadow: none !important;
+}
+af|panelBox.form::header-element {
+  font-size: 15px;
+}
+af|panelBox.form > af|panelBox::table {
+  background-color: #d1e2f0;
+  height: 30px;
+}
+af|panelBox.form > af|panelBox::center {
+  background-color: #ecf3f9;
+  padding: 4px 9px 7px;
+}
+af|panelBox.form > af|panelBox::center > af|panelBox::content {
+  background-color: #ecf3f9;
+}
+af|panelBox.form > af|panelBox::footer-center {
+  background-color: #ecf3f9;
+  height: 0;
+}
+af|panelBox.form.accordion::table {
+  background-color: transparent;
+}
+af|panelBox.form.accordion::table > tbody {
+  border-bottom: none;
+}
+af|panelBox.login {
+  max-width: 280px;
+  margin: 25px 10px 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15), 0 -1px 6px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15), 0 -1px 6px rgba(0, 0, 0, 0.15);
+}
+af|panelBox.login::header-element {
+  font-size: 18px;
+}
+af|panelBox.login > af|panelBox::table {
+  background-color: rgba(255, 255, 255, 0.2);
+  height: 45px;
+}
+af|panelBox.login > af|panelBox::center {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+af|panelBox.login > af|panelBox::center > af|panelBox::content {
+  background-color: transparent;
+}
+af|panelBox.login > af|panelBox::footer-center {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.cartable-wrapper af|panelBox.starter.fixed > af|panelBox::table {
+  top: 0px;
+}
+/*--------------------------------------------------------------- panelTabbed */
+af|panelTabbed.panelTabbedAutoHeight af|showDetailItem > *:first-child {
+  display: block;
+}
+af|panelTabbed:TopTabs::header,
+af|panelTabbed:BottomTabs::footer {
+  height: 30px !important;
+  margin-right:0px !important;
+}
+af|panelTabbed::body {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  padding: 10px;
+  font-family: 'iran-sans', sans-serif;
+  line-height: 1.2;
+}
+af|panelTabbed::tab {
+  vertical-align: middle;
+  margin-left: 2px;
+    display: block !important;
+}
+af|panelTabbed::tab-content {
+  height: 30px;
+  -webkit-border-radius: 2px 2px 0 0;
+  -moz-border-radius: 2px 2px 0 0;
+  border-radius: 2px 2px 0 0;
+  padding: 0 8px;
+  background-color: #ecf3f9;
+ 
+}
+af|panelTabbed > div > af|panelTabbed::tab-boundary > af|panelTabbed::viewable-tabs > af|panelTabbed::tab:Selected > af|panelTabbed::tab-content { 
+   background-color: #ffffff !important;  
+}
+af|panelTabbed:TopTabs > div[id$='tabb'] {
+  top: 30px !important;
+  bottom: 0 !important;
+}
+af|panelTabbed:BottomTabs > div[id$='tabb'] {
+  top: 2px !important;
+  bottom: 30px !important;
+}
+af|panelTabbed::tab-text-link {
+  font: normal 12px 'yekan', 'Helvetica';
+  color: #7C7C7C !important;
+  line-height: 2.2;
+}
+af|panelTabbed::tab-text-link:Selected {
+  font: normal 14px 'yekan', 'Helvetica';
+  color: #525252 !important;
+  line-height: 1.9;
+}
+af|panelTabbed::tab-text-link:hover:focus,
+af|panelTabbed::tab-text-link:focus,
+af|panelTabbed::tab-text-link:hover,
+af|panelTabbed::tab-text-link:active,
+af|panelTabbed::tab-text-link:active:focus,
+af|panelTabbed::tab-text-link:Selected:active,
+af|panelTabbed::tab-text-link:Selected {
+  text-decoration: none;
+}
+af|panelTabbed.dark > div > af|panelTabbed::tab-boundary > af|panelTabbed::viewable-tabs > af|panelTabbed::tab > af|panelTabbed::tab-content {
+  background-color: #f8fafd;
+}
+af|panelTabbed.dark > div > af|panelTabbed::tab-boundary > af|panelTabbed::viewable-tabs > af|panelTabbed::tab:Selected > af|panelTabbed::tab-content,
+af|panelTabbed.dark > div[id$="tabb"] > af|panelTabbed::body {
+  background-color: #ecf3f9 !important;
+}
+af|panelTabbed.step > div > af|panelTabbed::tab-boundary > af|panelTabbed::viewable-tabs > af|panelTabbed::tab > af|panelTabbed::tab-content {
+  background-color: #E1EEF7;
+}
+af|panelTabbed::tab.panelTabbedRequired af|panelTabbed::tab-text-link::before {
+  content: "*";
+  color: red;
+  font-size: 20px;
+  line-height: 0;
+}
+/*----------------------------------------------------------- panelCollection */
+af|panelCollection {
+  height: 130px;
+  min-height: 112px;
+}
+af|panelCollection af|toolbox::last-row {
+  background-color: #ecf3f9;
+  height: 28px;
+}
+af|panelCollection af|toolbar::item {
+  font: normal 14px 'iran-sans', sans-serif;
+}
+af|panelCollection af|toolbar::body {
+  height: 28px;
+}
+/*------------------------------------------------------------- panelSplitter */
+af|panelSplitter {
+  background-color: #ECF3F9;
+  border: 1px solid #CCD9E2;
+  -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  -moz-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  transition: all 0.2s linear 0ms;
+  -moz-transition: all 0.2s linear 0ms;
+  -webkit-transition: all 0.2s linear 0ms;
+  -o-transition: all 0.2s linear 0ms;
+  -ms-transition: all 0.2s linear 0ms;
+}
+af|panelSplitter::horizontal-divider,
+af|panelSplitter::vertical-divider {
+  overflow: visible;
+}
+af|panelSplitter::horizontal-icon-style,
+af|panelSplitter::vertical-icon-style {
+  font: normal normal normal 26px/1 FontAwesome;
+  background-image: none !important;
+  background-color: transparent;
+  text-decoration: none;
+  transition: all 0.2s linear 0ms;
+  -moz-transition: all 0.2s linear 0ms;
+  -webkit-transition: all 0.2s linear 0ms;
+  -o-transition: all 0.2s linear 0ms;
+  -ms-transition: all 0.2s linear 0ms;
+  cursor: pointer;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+af|panelSplitter::horizontal-icon-style:hover,
+af|panelSplitter::vertical-icon-style:hover,
+af|panelSplitter::horizontal-icon-style:focus,
+af|panelSplitter::vertical-icon-style:focus,
+af|panelSplitter::horizontal-icon-style:active,
+af|panelSplitter::vertical-icon-style:active {
+  text-decoration: none;
+}
+af|panelSplitter::horizontal-icon-style img,
+af|panelSplitter::vertical-icon-style img {
+  display: none;
+}
+af|panelSplitter::horizontal-icon-style::before {
+  content: "\f137";
+}
+af|panelSplitter::vertical-icon-style::before {
+  content: "\f13a";
+}
+af|panelSplitter::horizontal-divider:Disclosed af|panelSplitter::horizontal-icon-style::before {
+  content: "\f138";
+}
+af|panelSplitter::vertical-divider:Disclosed af|panelSplitter::vertical-icon-style::before {
+  content: "\f139";
+}
+af|panelSplitter::horizontal-icon-container {
+  position: relative;
+  left: 7px;
+}
+af|panelSplitter::vertical-icon-container {
+  text-align: right;
+  padding-right: 10px;
+  position: relative;
+  top: -9px;
+}
+af|panelSplitter::horizontal-divider .af_panelSplitter_horizontal-highlighter:hover,
+af|panelSplitter::horizontal-divider .af_panelSplitter_horizontal-highlighter:active {
+  background-color: #B5CDDE !important;
+}
+af|panelSplitter::horizontal-divider af|panelSplitter::horizontal-highlighter {
+  display: block !important;
+  background-color: #DBE5EC !important;
+  border-left: none !important;
+  left: 1px !important;
+  width: 5px;
+}
+af|panelSplitter::vertical-divider af|panelSplitter::vertical-highlighter {
+  display: block !important;
+  background-color: #DBE5EC !important;
+  border-top: none !important;
+  top: 1px !important;
+  height: 5px;
+}
+af|panelSplitter.cartable {
+  width: 100%;
+  background: #D1E2F0;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15), 0 -1px 6px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15), 0 -1px 6px rgba(0, 0, 0, 0.15);
+}
+af|panelSplitter.cartable > .af_panelSplitter_pane:nth-child(1) {
+  margin-right: 17px;
+}
+af|panelSplitter.cartable > .af_panelSplitter_pane:nth-child(1) af|panelSplitter .af_panelSplitter_pane:nth-child(3) {
+  margin-top: 15px;
+}
+af|panelSplitter.cartable af|panelSplitter {
+  /*
+            &::horizontal-icon-style::before{
+                content:"\f191";
+            }
+            &::vertical-icon-style::before{
+                content:"\f150";
+            }
+            &::horizontal-divider:Disclosed{
+                af|panelSplitter::horizontal-icon-style::before{
+                    content:"\f152";
+                }
+            }
+            &::vertical-divider:Disclosed{
+                af|panelSplitter::vertical-icon-style::before{
+                    content:"\f151";
+                }
+            }
+            */
+}
+af|panelSplitter.cartable af|panelSplitter:first-child {
+  background-color: #D1E2F0;
+}
+af|panelSplitter.cartable af|panelSplitter::horizontal-icon-style,
+af|panelSplitter.cartable af|panelSplitter::vertical-icon-style {
+  font: normal normal normal 28px/1 FontAwesome;
+  text-shadow: 0px 0px 10px rgba(0, 255, 255, 0.9);
+}
+af|panelSplitter.cartable af|panelSplitter::vertical-icon-container {
+  text-align: left;
+}
+af|panelSplitter.cartable af|panelSplitter::horizontal-icon-container {
+  vertical-align: top;
+}
+af|panelSplitter.cartable af|navigationPane-list::link:Disabled {
+  margin-right: 0;
+  font: normal 14px 'yekan', 'Helvetica';
+}
+af|panelSplitter.cartable af|navigationPane-list::link {
+  margin-right: 12px;
+  font: bold 14px 'iran-sans', sans-serif;
+}
+/*--------------------------------------------------------------------- table */
+af|table {
+  background-color: #ecf3f9;
+}
+af|table::data-row:Selected:Inactive af|column::data-cell {
+  background-color: #b3e5fc !important;
+}
+af|table::data-row af|inputListOfValues::content {
+  width: 90% !important;
+  max-width: 90%;
+}
+af|table::data-row af|inputListOfValues::search-icon-style {
+  left: 1px;
+  top: 3px;
+}
+af|table::data-row af|inputDate::content {
+  width: 90% !important;
+  max-width: 90%;
+}
+af|table::data-row af|inputDate::launch-icon-style {
+  left: 5px;
+  top: 2px;
+}
+af|table af|column::column-filter-cell {
+  margin: 0;
+  border: none;
+}
+af|table af|column::column-filter-cell af|inputDate::launch-icon-style {
+  top: 1px;
+  left: 1px;
+}
+af|table af|column::data-cell,
+af|table af|column::column-filter-cell {
+  padding: 0;
+}
+af|table af|column::data-cell af|inputText::content,
+af|table af|column::column-filter-cell af|inputText::content,
+af|table af|column::data-cell af|inputDate::content,
+af|table af|column::column-filter-cell af|inputDate::content,
+af|table af|column::data-cell af|selectOneChoice::content,
+af|table af|column::column-filter-cell af|selectOneChoice::content,
+af|table af|column::data-cell af|selectManyChoice::content,
+af|table af|column::column-filter-cell af|selectManyChoice::content,
+af|table af|column::data-cell af|inputListOfValues::content,
+af|table af|column::column-filter-cell af|inputListOfValues::content {
+  margin: 0;
+  padding: 0px 3px 0 0;
+  height: 22px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+af|table af|column::column-footer-cell {
+  font: bold 14px 'iran-sans', sans-serif;
+}
+af|table af|selectOneChoice:ReadOnly af|selectOneChoice::content {
+  display: inline;
+}
+af|table.read-only af|column::data-cell {
+  padding: 1px 2px;
+}
+af|table.lg af|column::data-cell,
+af|table.lg af|column::column-filter-cell {
+  padding: 0;
+}
+af|table.lg af|column::data-cell af|inputText::content,
+af|table.lg af|column::column-filter-cell af|inputText::content,
+af|table.lg af|column::data-cell af|inputDate::content,
+af|table.lg af|column::column-filter-cell af|inputDate::content,
+af|table.lg af|column::data-cell af|selectOneChoice::content,
+af|table.lg af|column::column-filter-cell af|selectOneChoice::content,
+af|table.lg af|column::data-cell af|selectManyChoice::content,
+af|table.lg af|column::column-filter-cell af|selectManyChoice::content,
+af|table.lg af|column::data-cell af|inputListOfValues::content,
+af|table.lg af|column::column-filter-cell af|inputListOfValues::content {
+  height: 32px;
+}
+af|table::navbar a:hover,
+af|table::navbar a:focus,
+af|table::navbar a:active {
+  text-decoration: none;
+}
+af|table::navbar af|table::navbar-row-range-text {
+  font: bold 14px 'iran-sans', sans-serif;
+}
+af|table::navbar af|table::navbar-page-input {
+  padding: 0 3px;
+  font: bold 14px 'iran-sans', sans-serif;
+  width: 30px;
+  height: 22px;
+  text-align: center;
+}
+af|table::navbar af|table::navbar-page-container af|table::navbar-page-link {
+  font: bold 14px 'iran-sans', sans-serif;
+}
+af|table::navbar af|table::navbar-page-container af|table::navbar-current-page {
+  font: bold 14px 'iran-sans', sans-serif;
+  min-width: 24px;
+  background-color: rgba(96, 149, 228, 0.1);
+  border: 1px solid #4c7899;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+af|table::navbar af|table::navbar-first-page-icon-style,
+af|table::navbar af|table::navbar-last-page-icon-style {
+  font: normal normal normal 16px/1 FontAwesome;
+  background-image: none;
+  height: 17px;
+}
+af|table::navbar af|table::navbar-previous-page-icon-style,
+af|table::navbar af|table::navbar-next-page-icon-style {
+  font: normal normal normal 15px/1 FontAwesome;
+  background-image: none;
+  height: 14px;
+}
+af|table::navbar af|table::navbar-previous-page-icon-style::before {
+  content: "\f054";
+}
+af|table::navbar af|table::navbar-next-page-icon-style::before {
+  content: "\f053";
+}
+af|table::navbar af|table::navbar-first-page-icon-style::before {
+  content: "\f051";
+}
+af|table::navbar af|table::navbar-last-page-icon-style::before {
+  content: "\f048";
+}
+/*-------------------------------------------------------------------- column */
+af|column::column-header-cell {
+  font: 12px 'yekan', 'Helvetica';
+  line-height: 1.8;
+  color: #676767;
+  background-color: #E1EEF7;
+}
+af|column::data-cell,
+af|column::banded-data-cell {
+  font: 13px 'iran-sans', sans-serif;
+  line-height: 1.5;
+}
+af|column::banded-data-cell {
+  background-color: #F3F8FC;
+}
+/*------------------------------------------------------------------- toolbar */
+af|toolbar af|commandLink:HoverTarget,
+af|toolbar af|commandLink:active,
+af|toolbar af|commandLink:focus,
+af|toolbar af|commandLink:TextOnly:focus,
+af|toolbar af|commandLink:hover,
+af|toolbar af|commandLink:hover:focus:active,
+af|toolbar af|commandLink:HoverTarget:hover,
+af|toolbar af|commandLink:HoverTarget:hover {
+  text-decoration: none;
+}
+af|toolbar.fadak .first,
+af|toolbar.fadak .last {
+  font-size: 17px;
+}
+af|toolbar.fadak .next,
+af|toolbar.fadak .prev {
+  font-size: 16px;
+}
+af|toolbar.fadak .edit {
+  font-size: 18px;
+}
+af|toolbar.fadak .search {
+  font-size: 18px;
+}
+af|toolbar.fadak .commit {
+  font-size: 20px;
+}
+af|toolbar.fadak .rollback {
+  font-size: 20px;
+}
+af|toolbar.fadak .create {
+  font-size: 20px;
+}
+af|toolbar.fadak .delete {
+  font-size: 20px;
+}
+af|toolbar.fadak .refresh {
+  font-size: 20px;
+}
+af|toolbar.fadak::content > table {
+  height: 24px;
+}
+af|toolbar.fadak af|commandLink {
+  margin-left: 5px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+af|toolbar.fadak af|commandLink:hover {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.35);
+}
+af|toolbar.toolbar-right {
+  float: right;
+  padding-right: 10px;
+  position: relative;
+  top: 3px;
+  border-right: 2px solid #5c5c5c;
+}
+af|toolbar.toolbar-right af|panelLabelAndMessage label {
+  font-size: 15px;
+}
+af|toolbar.toolbar-right af|panelLabelAndMessage::content-cell {
+  font-size: 17px;
+}
+af|toolbar.toolbar-toolbar-home {
+  position: absolute;
+  left: 19px;
+  top: 15px;
+  z-index: 100;
+  overflow: visible !important;
+}
+af|toolbar.toolbar-toolbar-home af|toolbar::content > table {
+  height: 35px;
+}
+af|toolbar.toolbar-toolbar-home.fixed {
+  position: fixed;
+  left: 10px;
+  top: 47px;
+  z-index: 2100;
+}
+.cartable-wrapper af|toolbar.toolbar-toolbar-home {
+  top: 39px;
+}
+.cartable-wrapper af|toolbar.toolbar-toolbar-home.fixed {
+  top: 9px;
+}
+/*------------------------------------------------------------------- menuBar */
+/*af|panelBox.starter af|panelBox::toolbar af|menuBar::item{padding-top:3px;}*/
+af|toolbar.toolbar-toolbar-home af|menuBar {
+  height: 25px;
+}
+/*---------------------------------------------------------------------- menu */
+af|menu {
+  /* Default */
+  /* button */
+}
+af|menu::bar-item.af|menu {
+  height: 22px;
+  padding: 3px 1px 1px 3px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  border: 1px solid transparent;
+}
+af|menu::baAr-item:Highlighted,
+af|menu::bar-item:Highlighted.af|menu {
+  padding: 3px 1px 1px 3px;
+  border: 1px solid orange;
+}
+af|menu::bar-item:Depressed,
+af|menu::bar-item:Depressed.af|menu {
+  padding: 3px 1px 1px 3px;
+  border: 1px solid gray;
+}
+af|menu::bar-item-text {
+  font: 12px 'yekan', 'Helvetica';
+  line-height: 1;
+  color: #676767;
+  padding-left: 2px;
+}
+af|menu::bar-item a:hover,
+af|menu::bar-item:Highlighted a:hover,
+af|menu::bar-item:Depressed a:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+af|menu.button,
+af|menu::bar-item.button.af|menu {
+  background-color: yellow;
+  border: 1px solid red;
+}
+af|menu::bar-item:Highlighted.button,
+af|menu::bar-item:Highlighted.button.af|menu {
+  background-color: red;
+  background-image: none;
+  border: 1px solid blue;
+}
+af|menu::bar-item:Depressed.button,
+af|menu::bar-item:Depressed.button.af|menu {
+  background-color: blue;
+  background-image: none;
+  border: 1px solid green;
+}
+af|menu::bar-item.button a {
+  color: red;
+}
+af|menu::bar-item:Highlighted.button a {
+  color: blue;
+}
+af|menu::bar-item:Depressed.button a {
+  color: White;
+}
+af|panelBox.starter af|panelBox::toolbar af|menu::bar-item-text,
+af|toolbar.toolbar-toolbar-home af|menu::bar-item-text {
+  font-size: 15px;
+}
+/*----------------------------------------------------------- commandMenuItem */
+af|commandMenuItem::menu-item-text {
+  font: 14px 'iran-sans', sans-serif;
+  line-height: 1;
+  color: #676767;
+  padding-left: 13px;
+}
+/*-------------------------------------------------------------------- dialog */
+af|dialog::title {
+  font: 15px 'yekan', 'Helvetica';
+}
+af|dialog::content {
+  font: 14px 'iran-sans', sans-serif;
+}
+af|dialog::footer-button {
+  padding: 3px 8px 2px !important;
+}
+af|dialog::content-center af|panelGroupLayout {
+  top: 0 !important;
+}
+af|inputListOfValues::dialog af|dialog::main {
+  min-height: 500px;
+  min-width: 700px;
+}
+/*
+af|inputListOfValues{-tr-stretch-search-dialog: true;} 
+af|inputComboboxListOfValues{-tr-stretch-search-dialog: true;} 
+*/
+/*--------------------------------------------------------------------- query */
+af|query {
+  /* LOV search - request page */
+  /* general LOV */
+}
+af|query.popup af|query::title0 {
+  display: none;
+}
+af|query.popup af|query::content0 > div {
+  overflow: hidden !important;
+}
+af|query::title-text2,
+af|query::title-text3,
+af|query::title-text4,
+af|query::title-text5 {
+  font: 15px 'iran-sans', sans-serif;
+}
+af|query::criteria af|selectOneRadio {
+  display: none;
+}
+af|query::criterion-label {
+  text-align: right;
+}
+af|query::criterion-content af|inputText::content {
+  width: 150px !important;
+}
+af|query::criterion-content af|inputNumberSpinbox af|inputNumberSpinbox::increment-cell,
+af|query::criterion-content af|inputNumberSpinbox af|inputNumberSpinbox::decrement-cell {
+  position: relative;
+  left: 16px;
+}
+af|query::criterion-content af|inputNumberSpinbox::content {
+  width: 150px !important;
+}
+af|query::criterion-content af|selectOneChoice::content {
+  width: 150px !important;
+}
+af|query::criterion-content af|selectManyChoice::content {
+  width: 140px !important;
+}
+af|query::criterion-content af|inputListOfValues::content {
+  width: 150px !important;
+}
+af|query::criterion-content af|inputListOfValues {
+  display: inline-block;
+}
+af|query::criterion-content af|inputDate::content {
+  width: 150px !important;
+}
+af|query::criterion-content af|inputDate::launch-icon-style {
+  top: 0px !important;
+}
+/*------------------------------------------------------------------ messages */
+af|messages::intro {
+  font: bold 15px 'iran-sans', sans-serif;
+}
+af|messages::detail {
+  font: 14px 'iran-sans', sans-serif;
+}
+af|messages::component-link {
+  font: 14px 'iran-sans', sans-serif;
+}
+.AFNoteWindowHintText {
+  font: bold 14px 'iran-sans', sans-serif;
+}
+/*------------------------------------------------------------------- message */
+af|message::type {
+  font: normal 14px 'iran-sans', sans-serif;
+  font-weight: bold;
+}
+af|message::detail {
+  font: normal 14px 'iran-sans', sans-serif;
+}
+/*--------------------------------------------------------------- panelWindow */
+af|panelWindow::title {
+  font: 15px 'yekan', 'Helvetica';
+}
+af|panelWindow::content {
+  font: 16px 'iran-sans', sans-serif;
+}
+/*------------------------------------------------------------------ carousel */
+af|carousel.perspective {
+  /*af|carousel::view>div{.perspective(1500px);}*/
+  /*af|carousel::item:Circular:Selected{.box-shadow(0px, 4px, 20px, 4px, rgba(0, 0, 0, 0.6)); .transform-rotate3d(1,0,0,10deg); -webkit-box-reflect:none;}*/
+  /*af|carousel::item:Circular{.box-shadow(0px, 4px, 20px, 4px, rgba(0, 0, 0, 0.5)); .transform-rotate3d(1,0,0,35deg); -webkit-box-reflect:below 1px -webkit-linear-gradient(bottom, rgba(255,255,255,0.3) 0%, transparent 15%, transparent 100%);}*/
+}
+af|carousel.perspective .image-scroll-area {
+  overflow: auto;
+  display: block;
+}
+af|carousel.perspective .image-toolbar {
+  position: absolute;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.65);
+  padding: 10px 0;
+  width: 100%;
+  right: 0;
+  text-align: right;
+  z-index: 5000;
+}
+af|carousel.perspective .image-toolbar span.text {
+  font-size: 15px;
+  color: #bbbbbb;
+}
+af|carousel.perspective .image-toolbar a.fa {
+  font-size: 1.5em;
+}
+af|carousel.perspective af|carousel::view {
+  bottom: 0px !important;
+}
+af|carousel.perspective af|carousel::item:Circular.p_AFSelected:hover .image-toolbar {
+  display: block;
+}
+af|carousel.perspective af|carousel::item:Circular .af_carouselItem .image-scroll-area img.image.rotate90 {
+  transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+}
+af|carousel.perspective af|carousel::item:Circular .af_carouselItem .image-scroll-area img.image.rotate180 {
+  transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+}
+af|carousel.perspective af|carousel::item:Circular .af_carouselItem .image-scroll-area img.image.rotate270 {
+  transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+}
+af|carousel.perspective af|carousel::item:Circular:Selected.full {
+  position: fixed;
+  top: 50px !important;
+  right: 50px !important;
+  width: 90% !important;
+  height: 85vh !important;
+}
+af|carousel.perspective af|carousel::item:Circular:Selected.full .image-scroll-area {
+  width: 100% !important;
+  height: 84vh !important;
+}
+af|carousel.perspective af|carousel::item:Circular:Selected af|carouselItem img.image {
+  height: auto;
+  width: auto;
+  transition: all 0.3s ease-out 0ms;
+  -moz-transition: all 0.3s ease-out 0ms;
+  -webkit-transition: all 0.3s ease-out 0ms;
+  -o-transition: all 0.3s ease-out 0ms;
+  -ms-transition: all 0.3s ease-out 0ms;
+}
+af|carousel.perspective div[id$='sc'] {
+  z-index: 9999;
+}
+/*--------------------------------------------------------- progressIndicator */
+af|progressIndicator::determinate,
+af|progressIndicator::determinate-filled-icon-style,
+af|progressIndicator::determinate-empty-icon-style {
+  height: 20px !important;
+}
+af|progressIndicator::determinate-start-label,
+af|progressIndicator::determinate-end-label {
+  font: normal 14px 'iran-sans', sans-serif;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+af|progressIndicator::determinate-start-label {
+  text-align: right;
+}
+af|progressIndicator::determinate-end-label {
+  text-align: left;
+}
+af|progressIndicator::determinate-filled-icon-style {
+  float: right;
+  background-image: none;
+  background-color: #337ab7;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+}
+af|progressIndicator::determinate-empty-icon-style {
+  float: left;
+  background-image: none;
+  background-color: #f5f5f5;
+  border-radius: 4px 0 0 4px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+/*---------------------------------------------------------------------- tree */
+af|tree::node-stamp-text {
+  font: normal 14px 'iran-sans', sans-serif;
+}
+/*----------------------------------------------------- all component - visit */
+af|commandLink:visited,
+af|goLink:visited,
+af|messages::component-link:visited,
+af|calendar::list-day-of-month-link:visited,
+af|calendar::list-title-link:visited,
+af|calendar::month-overflow-link:visited,
+af|goLink:active,
+af|messages::component-link:active,
+af|calendar::list-day-of-month-link:active,
+af|calendar::list-title-link:active,
+af|calendar::month-grid-cell-header-day-link:active,
+af|calendar::month-overflow-link:active,
+af|calendar::week-header-day-link:active,
+af|commandLink:link:active,
+af|goLink:link:active,
+af|messages::component-link:link:active,
+af|calendar::list-day-of-month-link:link:active,
+af|calendar::list-title-link:link:active,
+af|calendar::month-grid-cell-header-day-link:link:active,
+af|calendar::month-overflow-link:link:active,
+af|calendar::week-header-day-link:link:active,
+af|train::stop-link.AFTrainVisited,
+af|train-vertical::stop-link.AFTrainVisited,
+af|commandImageLink:active,
+af|goImageLink:active,
+af|commandImageLink:visited,
+af|goImageLink:visited,
+af|navigationPane-tabs::conveyor-belt-container .AFConveyorBeltElement af|navigationPane-tabs::tab-link:active:hover,
+af|panelTabbed::conveyor-belt-container .AFConveyorBeltElement:active:hover,
+af|navigationPane-tabs::overflow-container .AFOverflowElement af|navigationPane-tabs::tab-link:active:hover,
+af|panelTabbed::overflow-container .AFOverflowElement:active:hover,
+af|panelAccordion::overflow-container .AFOverflowElement:active:hover {
+  color: #406581;
+}
